@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- You have to type the TEI file, with researchStep or researchScenario -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="st_0000000001">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_verification_and_cleanup">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Title of the file, not title of the step</title>
+                <title>Description of the "Verification and Cleanup" step</title>
                 <author>
-                    <persName>author</persName>
-                    <affiliation>...</affiliation>
+                    <persName>Klaus Illmayer</persName>
+                    <affiliation>OEAW-ACDH</affiliation>
+                </author>
+                <author>
+                    <persName>Susanne Haaf</persName>
+                    <affiliation>BBAW</affiliation>
+                </author>
+                <author>
+                    <persName>Piotr Bański</persName>
+                    <affiliation>IDS Mannheim, CLARIN</affiliation>
                 </author>
             </titleStmt>
             <publicationStmt>
@@ -34,9 +42,9 @@
             <listEvent>
                 <event type="researchStep">
                     <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
-                    <head type="stepTitle" xml:lang="en">Title of the step in English</head>
-                    <head type="stepTitle" xml:lang="fr">Titre de l'étape en Français</head>
-                    <desc type="definition" xml:lang="en">Definition of the step, in a few sentences</desc>
+                    <head type="stepTitle" xml:lang="en">Verification and Clean-up</head>
+                    <head type="stepTitle" xml:lang="fr">LA Verification and Clean-up</head>
+                    <desc type="definition" xml:lang="en">This is a step that is actually a "hidden" or "stepified" scenario which should take parameters.</desc>
                     <desc xml:lang="en" type="terms">
                         <term type="standard" source="standard_list" key="XML"/>
                         <term type="standard" source="standard_list" key="TEI"/>
@@ -46,7 +54,7 @@
                             >modeling</term>
                         <term type="policies" source="WP3Wizard" key="CD"/>
                     </desc>
-                    <linkGrp type="generalResources">
+                    <!--<linkGrp type="generalResources">
                         <ref type="spec" source="zotero" target="ZABRV5VD">
                             <term type="standard" source="standard_list" key="TEI"/>
                         </ref>
@@ -79,7 +87,7 @@
                             <term type="standard" source="standard_list" key="TEI"/>
                             <term type="standard" source="standard_list" key="EAD"/>
                         </ref>
-                    </linkGrp>
+                    </linkGrp>-->
                 </event>
             </listEvent>
         </body>
