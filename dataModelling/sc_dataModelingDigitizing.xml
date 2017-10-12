@@ -36,7 +36,7 @@
          <div type="scenario" xml:id="sc_schemaCustomization">
             <!-- All the textual information about scenarios and steps is now contained in the <head> element-->
             <head xml:lang="en" type="scenarioTitle">Digitizing</head>
-            <desc type="definition" xml:lang="en">Scenario consisting of a stepwise description of the process of digitizing documents or images.</desc>
+            <desc type="definition" xml:lang="en">Scenario consisting of a stepwise description of the process of digitizing text documents or images.</desc>
             <!--<desc type=""></desc>-->
             <desc xml:lang="en" type="terms">
                <!-- Need a reference resource for all the terms, including Parthenos disciplines, datatypes, etc...  -->
@@ -66,12 +66,16 @@
                <event xml:id="s2" type="researchStep" ref="describeDocumentType"/>
                <event xml:id="s3" type="researchStep" ref="assessLegalIssues"/>
                <event xml:id="s4" type="researchStep" ref="determineScanningMethod"/>
-               <event xml:id="s5" type="researchStep" ref="defineImageSpecs"/>
+               <event xml:id="s5" type="researchStep" ref="defineImagingSpecs"/>
                <event xml:id="s6" type="researchStep" ref="image"/>
                <event xml:id="s7" type="researchStep" ref="ensureQualityControl"/>
                <event xml:id="s8" type="researchStep" ref="storeMasterFiles"/>
                <event xml:id="s9" type="researchStep" ref="postProcess"/>
                <event xml:id="s10" type="researchStep" ref="storeEditedFiles"/>
+               <event xml:id="s11" type="researchStep" ref="determineTranscriptionMethod"> 
+                  <desc xml:lang="" type="comment">Points to either manual or OCR</desc> 
+               </event>
+               <event xml:id="s12" type="researchStep" ref="createMetadata"/>
             </listEvent>
          </div>
       </body>
