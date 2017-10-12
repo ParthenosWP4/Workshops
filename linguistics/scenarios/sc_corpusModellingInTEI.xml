@@ -63,8 +63,9 @@
                <event xml:id="CMiT1" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
                <event xml:id="CMiT5" type="researchStep" ref="../steps/step_conversionToTEI.xml#step_conversionToTEI"/>
                <event xml:id="CMiT15" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
+               <event xml:id="CMiT20" type="researchStep" ref="../steps/step_createWorkbench.xml#step_createWorkbench"/>
+               <event xml:id="CMiT25" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
                <event xml:id="CMiT35" type="researchStep" ref="../steps/step_finalize.xml#step_finalize"/>
-
             </listEvent>
          </div>
       </body>
