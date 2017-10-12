@@ -44,7 +44,7 @@
          <div type="scenario" xml:id="sc_schemaCustomization">
             <!-- All the textual information about scenarios and steps is now contained in the <head> element-->
             <head xml:lang="en" type="scenarioTitle">Corpus modelling in TEI</head>
-            <desc type="definition" xml:lang="en">Description of the scenario</desc>
+            <desc type="definition" xml:lang="en">This scenario enumerates steps that make it possible to create a corpus in the TEI.</desc>
             <!--<desc type=""></desc>-->
             <desc xml:lang="en" type="terms">
                <!-- Need a reference resource for all the terms, including Parthenos disciplines, datatypes, etc...  -->
@@ -59,15 +59,15 @@
             </figure>-->
             <listEvent>
                <!-- <event type="scenario" ref="SSK_digitization.xml"/> -->
-               <event xml:id="CMiT0" type="researchStep" ref="../steps/step_corpusComposition.xml#step_corpusComposition"/>
-               <event xml:id="CMiT1" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
-               <event xml:id="CMiT5" type="researchStep" ref="../steps/step_conversionToTEI.xml#step_conversionToTEI"/>
+               <event xml:id="CMiT01" type="researchStep" ref="../steps/step_corpusComposition.xml#step_corpusComposition"/>
+               <event xml:id="CMiT02" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
+               <event xml:id="CMiT05" type="researchStep" ref="../steps/step_conversionToTEI.xml#step_conversionToTEI"/>
                <event xml:id="CMiT15" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
                <event xml:id="CMiT20" type="researchStep" ref="../steps/step_createWorkbench.xml#step_createWorkbench"/>
                <event xml:id="CMiT25" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
-               <event xml:id="CMiT4" type="researchStep" ref="../steps/step_annotation.xml#step_annotation"/>
+               <event xml:id="CMiT40" type="researchStep" ref="../steps/step_annotation.xml#step_annotation"/>
                <event xml:id="CMiT45" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
-               <event xml:id="CMiT35" type="researchStep" ref="../steps/step_finalize.xml#step_finalize"/>
+               <event xml:id="CMiT55" type="researchStep" ref="../steps/step_finalize.xml#step_finalize"/>
             </listEvent>
          </div>
       </body>
