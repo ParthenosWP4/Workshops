@@ -52,6 +52,9 @@
                             >Conversion</term>
                     </desc>
                     <!--<linkGrp type="generalResources">
+                        <ref type="spec"></ref> // here a reference to the tool OxGarage would be great, but we do not have a type for tools 
+                    </linkGrp>-->
+                    <!--<linkGrp type="generalResources">
                         <ref type="spec" source="zotero" target="ZABRV5VD">
                             <term type="standard" source="standard_list" key="TEI"/>
                         </ref>
