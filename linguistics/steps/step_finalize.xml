@@ -49,18 +49,14 @@
                         <term type="standard" source="standard_list" key="XML"/>
                         <term type="standard" source="standard_list" key="TEI"/>
                         <term type="activity" source="http://tadirah.dariah.eu/"
-                            key="http://tadirah.dariah.eu/vocab/index.php?tema=35&amp;/modeling"
-                            >modeling</term>
-                        
-                        <!--      https://www.force11.org/group/fairgroup/fairprinciples                  -->
-                        
+                            key="modeling">modeling</term>
                         <term type="policies" source="WP3Wizard" key="CD"/>
                     </desc>
-                    <!--<linkGrp type="generalResources">
-                        <ref type="spec" source="zotero" target="ZABRV5VD">   modify target
-                            <term type="standard" source="standard_list" key="FAIR"/>
+                    <linkGrp type="generalResources">
+                        <ref type="spec" target="https://www.zotero.org/groups/427927/parthenos-wp4/items/itemKey/ZJ7ZSJWT">
+                            <term type="standard" source="http://www.zotero.org" key="ZJ7ZSJWT">FAIR principles</term>
                         </ref>
-                    </linkGrp>-->
+                    </linkGrp>
                 </event>
             </listEvent>
         </body>
