@@ -44,48 +44,21 @@
                     <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
                     <head type="stepTitle" xml:lang="en">Finalize</head>
                     <head type="stepTitle" xml:lang="fr">La Finalize</head>
-                    <desc type="definition" xml:lang="en">Finalize coprus creation: ensure a nice acronym and publish</desc>
+                    <desc type="definition" xml:lang="en">Finalize corpus creation: ensure a nice acronym (FAIR - link to WP3)</desc>
                     <desc xml:lang="en" type="terms">
                         <term type="standard" source="standard_list" key="XML"/>
                         <term type="standard" source="standard_list" key="TEI"/>
-                        <term type="standard" source="standard_list" key="EAD"/>
                         <term type="activity" source="http://tadirah.dariah.eu/"
                             key="http://tadirah.dariah.eu/vocab/index.php?tema=35&amp;/modeling"
                             >modeling</term>
+                        
+                        <!--      https://www.force11.org/group/fairgroup/fairprinciples                  -->
+                        
                         <term type="policies" source="WP3Wizard" key="CD"/>
                     </desc>
                     <!--<linkGrp type="generalResources">
-                        <ref type="spec" source="zotero" target="ZABRV5VD">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                        </ref>
-                        <ref type="spec" source="zotero" target="SS93B7B8">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                        </ref>
-                        <ref type="spec" source="zotero" target="ZE34VR34">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                        </ref>
-                        <ref type="tutorial" source="zotero" target="UBE86XKI">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                        </ref>
-                        <ref type="tutorial" source="zotero" target="QQT6NQA6">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                        </ref>
-                        <ref type="tutorial" source="zotero" target="IE9EQ2QK">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                        </ref>
-                        <ref type="tutorial" source="zotero" target="69CGH77A">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                        </ref>
-                        <ref type="spec" source="zotero" target="XPDZH8WZ">
-                            <term type="standard" source="standard_list" key="EAD"/>
-                        </ref>
-                        <ref type="spec" source="zotero" target="2Z29AVQV">
-                            <term type="standard" source="standard_list" key="EAD"/>
-                        </ref>
-                        <ref type="code" source="github"
-                            target="https://github.com/PARTHENOSWP4/standardsLibrary/tree/master/archivalDescription/EAD/odd">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                            <term type="standard" source="standard_list" key="EAD"/>
+                        <ref type="spec" source="zotero" target="ZABRV5VD">   modify target
+                            <term type="standard" source="standard_list" key="FAIR"/>
                         </ref>
                     </linkGrp>-->
                 </event>
