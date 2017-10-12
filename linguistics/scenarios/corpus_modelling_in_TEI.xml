@@ -59,7 +59,7 @@
             </figure>-->
             <listEvent>
                <!-- <event type="scenario" ref="SSK_digitization.xml"/> -->
-               <event xml:id="s1" type="researchStep" ref="step_verification_and_cleanup"/>
+               <event xml:id="s1" type="researchStep" ref="#step_verification_and_cleanup"/>
 
             </listEvent>
          </div>
