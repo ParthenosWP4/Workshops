@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- You have to type the TEI file, with researchStep or researchScenario -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_verificationAndCleanup">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_finalize">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Description of the "Verification and Cleanup" step</title>
+                <title>Description of the "Finalize" step</title>
                 <author>
                     <persName>Klaus Illmayer</persName>
                     <affiliation>OEAW-ACDH</affiliation>
@@ -42,9 +42,9 @@
             <listEvent>
                 <event type="researchStep">
                     <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
-                    <head type="stepTitle" xml:lang="en">Verification and Clean-up</head>
-                    <head type="stepTitle" xml:lang="fr">LA Verification and Clean-up</head>
-                    <desc type="definition" xml:lang="en">This is a step that is actually a "hidden" or "stepified" scenario which should take parameters.</desc>
+                    <head type="stepTitle" xml:lang="en">Finalize</head>
+                    <head type="stepTitle" xml:lang="fr">La Finalize</head>
+                    <desc type="definition" xml:lang="en">Finalize coprus creation: ensure a nice acronym and publish</desc>
                     <desc xml:lang="en" type="terms">
                         <term type="standard" source="standard_list" key="XML"/>
                         <term type="standard" source="standard_list" key="TEI"/>
