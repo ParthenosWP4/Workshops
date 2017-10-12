@@ -50,23 +50,12 @@
                         <term type="standard" source="standard_list" key="TEI"/>
 
                         <term type="activity" source="http://tadirah.dariah.eu/"
-                            key="http://tadirah.dariah.eu/vocab/index.php?tema=50&amp;/meta-assessing"
-                            >assessing</term>
+                            key="meta-assessing">assessing</term>
                         <term type="activity" source="http://tadirah.dariah.eu/"
-                            key="http://tadirah.dariah.eu/vocab/index.php?tema=23&amp;/cleanup"
-                            >cleanup</term>
+                            key="cleanup">cleanup</term>
                         <term type="policies" source="WP3Wizard" key="CD"/>
                     </desc>
-                    <!--<linkGrp type="generalResources">
-                        <ref type="spec" source="zotero" target="ZABRV5VD">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                        </ref>
-                        <ref type="code" source="github"
-                            target="https://github.com/PARTHENOSWP4/standardsLibrary/tree/master/archivalDescription/EAD/odd">
-                            <term type="standard" source="standard_list" key="TEI"/>
-                            <term type="standard" source="standard_list" key="EAD"/>
-                        </ref>
-                    </linkGrp>-->
+
                 </event>
             </listEvent>
         </body>
