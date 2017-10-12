@@ -69,6 +69,7 @@
                <event xml:id="CMiT45" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
                <event xml:id="CMiT55" type="researchStep" ref="../steps/step_finalize.xml#step_finalize"/>
             </listEvent>
+            <!-- we would like to be able to name preliminary and follow-up scenarios, too -->
          </div>
       </body>
    </text>
