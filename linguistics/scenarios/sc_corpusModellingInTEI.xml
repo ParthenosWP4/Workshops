@@ -59,6 +59,7 @@
             </figure>-->
             <listEvent>
                <!-- <event type="scenario" ref="SSK_digitization.xml"/> -->
+               <event xml:id="CMiT0" type="researchStep" ref="../steps/step_corpusComposition.xml#step_corpusComposition"/>
                <event xml:id="CMiT1" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
                <event xml:id="CMiT5" type="researchStep" ref="../steps/step_conversionToTEI.xml#step_conversionToTEI"/>
                <event xml:id="CMiT15" type="researchStep" ref="../steps/step_verificationAndCleanup.xml#step_verificationAndCleanup"/>
