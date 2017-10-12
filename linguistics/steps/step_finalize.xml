@@ -44,7 +44,7 @@
                     <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
                     <head type="stepTitle" xml:lang="en">Finalize</head>
                     <head type="stepTitle" xml:lang="fr">La Finalize</head>
-                    <desc type="definition" xml:lang="en">Finalize corpus creation: ensure a nice acronym (FAIR - link to WP3)</desc>
+                    <desc type="definition" xml:lang="en">Finalize corpus creation: ensure a nice acronym (FAIR)</desc>
                     <desc xml:lang="en" type="terms">
                         <term type="standard" source="standard_list" key="XML"/>
                         <term type="standard" source="standard_list" key="TEI"/>
