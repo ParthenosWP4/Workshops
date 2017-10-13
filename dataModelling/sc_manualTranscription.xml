@@ -57,10 +57,12 @@
                 </figure>
                 <listEvent>
                     <!-- <event type="scenario" ref="SSK_digitization.xml"/> -->
-                    <event xml:id="s1" type="researchStep" ref="chooseTool" />                     
-                    <event xml:id="s2" type="researchStep" ref="writeOutText"/>
-                    <event xml:id="s3" type="researchStep" ref="addHandwrittenTextToObject"/>
-                    <event xml:id="s4" type="researchScenario" ref="sc_digitization">   
+                    <event xml:id="s1" type="researchStep" ref="chooseFormat" /> 
+                    <event xml:id="s2" type="researchStep" ref="chooseToolOrPlatform" />                     
+                    <event xml:id="s3" type="researchStep" ref="Transcribe"/>
+                    <event xml:id="s4" type="researchStep" ref="correctErrorsIfNecessary"/>
+                    <event xml:id="s5" type="researchStep" ref="addTranscribedTextToObject"/>
+                    <event xml:id="s6" type="researchScenario" ref="sc_digitization">   
                   <listEvent>
             </div>
         </body>
