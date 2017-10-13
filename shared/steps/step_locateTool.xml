@@ -39,6 +39,9 @@
     </teiHeader>
     <text>
         <body>
+            
+<!--  this step requires (can use) two parameters passed from its/a scenario    -->
+            
             <listEvent>
                 <event type="researchStep">
                     <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
