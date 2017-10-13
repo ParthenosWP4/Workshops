@@ -41,7 +41,7 @@
    </teiHeader>
    <text>
       <body>
-         <div type="scenario" xml:id="sc_schemaCustomization">
+         <div type="scenario" xml:id="sc_corpusModellingInTEI">
             <!-- All the textual information about scenarios and steps is now contained in the <head> element-->
             <head xml:lang="en" type="scenarioTitle">Corpus modelling in TEI</head>
             <desc type="definition" xml:lang="en">This scenario enumerates steps that make it possible to create a corpus in the TEI. General remark: document each step, keep backups before major changes.</desc>
