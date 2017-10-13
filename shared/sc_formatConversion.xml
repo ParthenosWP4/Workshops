@@ -40,24 +40,40 @@
          <div type="scenario" xml:id="sc_formatConversion">
             <!-- All the textual information about scenarios and steps is now contained in the <head> element-->
             <head xml:lang="en" type="scenarioTitle">Format conversion</head>
-            <desc type="definition" xml:lang="en">This scenario enumerates steps that make it possible to create a corpus in the TEI. General remark: document each step, keep backups before major changes.</desc>
+            <desc type="definition" xml:lang="en">This scenario documents the process of format conversion: “convert X into Y” (verify the existing format, locate tool, verify output).</desc>
             <!--<desc type=""></desc>-->
             <desc xml:lang="en" type="terms">
                <!-- Need a reference resource for all the terms, including Parthenos disciplines, datatypes, etc...  -->
                <term source="parthenos" type="discipline" key="SOTP">Linguistics</term>
                <term type="datatype" key="catalogs" source="nedimah"/>
             </desc>
+            <paramList>
+               <paramSpec ident="inputFormat">
+                  <desc>input format: undefined or a format (file format or encoding)</desc>
+               </paramSpec>
+               <paramSpec ident="outputFormat">
+                  <desc>output format: undefined or a format (file format or encoding)</desc>
+               </paramSpec>
+            </paramList>
             <!--<figure type="image">
                <!-\- Illustration of the scenario. Can also be used in the steps -\->
                <head>Title of the image</head>
                <graphic url=""/>
                <figDesc>Description of the image</figDesc>
             </figure>-->
+            
             <listEvent>
-               <!-- <event type="scenario" ref="SSK_digitization.xml"/> -->
-               <event xml:id="fC_01" type="researchStep" ref="../steps/step_identifyAndverifyFormat.xml#step_identifyAndverifyFormat"/>
-               <event xml:id="fC_05" type="researchStep" ref="../steps/step_locateTool.xml#step_locateTool"/>
-               <event xml:id="fC_08" type="researchStep" ref="../steps/step_verifyOutput.xml#step_verifyOutput"/>
+               
+               <event xml:id="fC_01" type="researchStep" ref="../steps/step_identifyAndVerifyFormat.xml#step_identifyAndVerifyFormat">
+                  <param name="inputFormat" value="$inputFormat"/>
+               </event>
+               <event xml:id="fC_05" type="researchStep" ref="../steps/step_locateTool.xml#step_locateTool">
+                  <param name="inputFormat" value="$inputFormat"/>
+                  <param name="outputFormat" value="$outputFormat"/>
+               </event>
+               <event xml:id="fC_08" type="researchStep" ref="../steps/step_verifyOutput.xml#step_verifyOutput">
+                  <param name="outputFormat" value="$outputFormat"/>
+               </event>
             </listEvent>
             <!-- this scenario needs an addition: a list of tags/format and methods for their verification + potential deprecation notices -->
          </div>
