@@ -44,7 +44,7 @@
          <div type="scenario" xml:id="sc_schemaCustomization">
             <!-- All the textual information about scenarios and steps is now contained in the <head> element-->
             <head xml:lang="en" type="scenarioTitle">Corpus modelling in TEI</head>
-            <desc type="definition" xml:lang="en">This scenario enumerates steps that make it possible to create a corpus in the TEI.</desc>
+            <desc type="definition" xml:lang="en">This scenario enumerates steps that make it possible to create a corpus in the TEI. General remark: document each step, keep backups before major changes.</desc>
             <!--<desc type=""></desc>-->
             <desc xml:lang="en" type="terms">
                <!-- Need a reference resource for all the terms, including Parthenos disciplines, datatypes, etc...  -->

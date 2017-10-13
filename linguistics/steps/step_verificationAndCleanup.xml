@@ -44,7 +44,7 @@
                     <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
                     <head type="stepTitle" xml:lang="en">Verification and Cleanup</head>
                     <head type="stepTitle" xml:lang="fr">La Verification avec la Cleanup</head>
-                    <desc type="definition" xml:lang="en">This is a step that is actually a "hidden" or "stepified" scenario which should take parameters. Verification can be automatic at first, and then manual, done by annotators. This step has the power of looping the entire process back to the previous step (after the/some errors have been corrected).</desc>
+                    <desc type="definition" xml:lang="en">This is a step that is actually a "hidden" or "stepified" scenario which should take parameters. Verification can be automatic at first, and then manual, done by annotators. This step has the power of looping the entire process back to the previous step (after the/some errors have been corrected). Important: preserve the data that is about to undergo cleanup (simplest: zip with a date stamp, more intricate: use a versioning system)</desc>
                     <desc xml:lang="en" type="terms">
                         <term type="standard" source="standard_list" key="XML"/>
                         <term type="standard" source="standard_list" key="TEI"/>
