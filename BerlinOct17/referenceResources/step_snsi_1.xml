@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!-- You have to type the TEI file, with researchStep or researchScenario -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="st_0000000001">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>step_DtrTaTGaCB.xml</title>
+                <author>
+                    <persName>Maurizio Sanesi</persName>
+                    <affiliation>SISMEL</affiliation>
+                </author>
+    <author>
+                    <persName>Karolien Verbrugge</persName>
+                    <affiliation>NIOD</affiliation>
+                </author>
+	<author>
+                    <persName>Claus Spiecker</persName>
+                    <affiliation>FHP</affiliation>
+                </author>
+	<author>
+                    <persName>Roberta Giacomi</persName>
+                    <affiliation>SISMEL</affiliation>
+                </author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Parthenos</authority>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by/4.0/">
+                        <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies
+                            to this document.</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Created from scratch</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <!-- Use only for major changes -->
+            <change/>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listEvent>
+                <event type="researchStep">
+                    <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
+                    <head type="stepTitle" xml:lang="en">Define the research target (persons, works, shelfmarks), and thematic, geographic and chronological boundaries</head>
+                    <head type="stepTitle" xml:lang="fr">Titre de l'étape en Français</head>
+                    <desc type="definition" xml:lang="en">Formulate a research question and survey the source material and the general historical and theoretical literature</desc>
+                    <desc xml:lang="en" type="terms">
+                        <term type="standard" source="standard_list" key="XML"/>
+                        <term type="standard" source="standard_list" key="TEI"/>
+                        
+                        <term type="activity" source="http://tadirah.dariah.eu/"
+                            key="modeling" />
+                        <term type="policies" source="WP3Wizard" key="CD"/>
+                    </desc>
+                    <linkGrp type="generalResources">
+                        <ref type="spec" source="zotero" target="ZABRV5VD">
+                            <term type="standard" source="standard_list" key="TEI"/>
+                        </ref>
+                        <ref type="spec" source="zotero" target="SS93B7B8">
+                            <term type="standard" source="standard_list" key="TEI"/>
+                        </ref>
+                        <ref type="spec" source="zotero" target="ZE34VR34">
+                            <term type="standard" source="standard_list" key="TEI"/>
+                        </ref>
+                        <ref type="tutorial" source="zotero" target="UBE86XKI">
+                            <term type="standard" source="standard_list" key="TEI"/>
+                        </ref>
+                        <ref type="tutorial" source="zotero" target="QQT6NQA6">
+                            <term type="standard" source="standard_list" key="TEI"/>
+                        </ref>
+                        <ref type="tutorial" source="zotero" target="IE9EQ2QK">
+                            <term type="standard" source="standard_list" key="TEI"/>
+                        </ref>
+                        <ref type="tutorial" source="zotero" target="69CGH77A">
+                            <term type="standard" source="standard_list" key="TEI"/>
+                        </ref>
+                        <ref type="spec" source="zotero" target="XPDZH8WZ">
+                            <term type="standard" source="standard_list" key="EAD"/>
+                        </ref>
+                        <ref type="spec" source="zotero" target="2Z29AVQV">
+                            <term type="standard" source="standard_list" key="EAD"/>
+                        </ref>
+                        <ref type="code" source="github"
+                            target="https://github.com/PARTHENOSWP4/standardsLibrary/tree/master/archivalDescription/EAD/odd">
+                            <term type="standard" source="standard_list" key="TEI"/>
+                        </ref>
+                    </linkGrp>
+                </event>
+            </listEvent>
+        </body>
+    </text>
+</TEI>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchScenario">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Project-centered EAD customization scenario</title>
+            <author>
+               <persName>Charles Riondet</persName>
+               <affiliation>Inria</affiliation>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Parthenos ...</authority>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/">
+                  <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence
+                     applies to this document.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Created from scratch</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change/>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="scenario" xml:id="sc_schemaCustomization">
+               <head xml:lang="en" type="scenarioTitle">Project-centered EAD customization</head>
+               <desc type="definition" xml:lang="en">TEI ODD can be used to document data models external to the TEI environment. Several projects working with archival standards (in particular EAD) use it as well. PARTHENOS
+                  created and maintain an instance of the EAD specification in ODD, that can be used to create project oriented customizations. </desc>
+               <desc xml:lang="en" type="terms">
+               <term source="parthenos" type="discipline" key="SOTP">Studies of the past</term>
+               <term source="parthenos" type="discipline" key="HAD">Heritage and applied disciplines</term>
+               <term type="objects" key="metadata" source="tadirah"/>
+               </desc>
+               <figure type="image">
+                  <head/>
+                  <graphic url="img/chris-lawton-236413.jpg"/>
+                  <figDesc>Photo by Chris Lawton on Unsplash</figDesc>
+               </figure>
+            <listEvent>
+               <event xml:id="s1" type="researchStep" ref="step_EaXswO_150917"/>
+               <event xml:id="s2" type="researchStep" ref="step_Eprimrf_300517"/>
+               <event xml:id="s3" type="researchStep" ref="step_Cad_300517"/>
+               <event xml:id="s4" type="researchStep" ref="step_Tdats_300517"/>
+               <event xml:id="s5" type="researchStep" ref="step_Sapditnf_300517"/>
+            </listEvent>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchScenario">
+   <teiHeader>
+      <!-- teiHeader TBC -->
+      <fileDesc>
+         <titleStmt>
+            <!-- Title of the tei document, not title of the scenario -->
+            <title>Description of the parametrized scenario "Format Conversion"</title>
+            <author>
+               <persName>Klaus Illmayer</persName>
+               <affiliation>OEAW-ACDH</affiliation>
+            </author>
+            <author>
+               <persName>Piotr Bański</persName>
+               <affiliation>IDS Mannheim, CLARIN</affiliation>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Parthenos ...</authority>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/">
+                  <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to
+                     this document.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Created from scratch</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change>
+            <!-- Only for major changes: addition of an author, of a step, etc. -->
+         </change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="scenario" xml:id="sc_formatConversion">
+            <!-- All the textual information about scenarios and steps is now contained in the <head> element-->
+            <head xml:lang="en" type="scenarioTitle">Format conversion</head>
+            <desc type="definition" xml:lang="en">This scenario documents the process of format conversion: “convert X into Y” (verify the existing format, locate tool, verify output).</desc>
+            <!--<desc type=""></desc>-->
+            <desc xml:lang="en" type="terms">
+               <!-- Need a reference resource for all the terms, including Parthenos disciplines, datatypes, etc...  -->
+               <term source="parthenos" type="discipline" key="SOTP">Linguistics</term>
+               <term type="datatype" key="catalogs" source="nedimah"/>
+            </desc>
+            <paramList>
+               <paramSpec ident="inputFormat">
+                  <desc>input format: undefined or a format (file format or encoding)</desc>
+               </paramSpec>
+               <paramSpec ident="outputFormat">
+                  <desc>output format: undefined or a format (file format or encoding)</desc>
+               </paramSpec>
+            </paramList>
+            <!--<figure type="image">
+               <!-\- Illustration of the scenario. Can also be used in the steps -\->
+               <head>Title of the image</head>
+               <graphic url=""/>
+               <figDesc>Description of the image</figDesc>
+            </figure>-->
+            
+            <listEvent>
+               
+               <event xml:id="fC_01" type="researchStep" ref="../steps/step_identifyAndVerifyFormat.xml#step_identifyAndVerifyFormat">
+                  <param name="inputFormat" value="$inputFormat"/>
+               </event>
+               <event xml:id="fC_05" type="researchStep" ref="../steps/step_locateTool.xml#step_locateTool">
+                  <param name="inputFormat" value="$inputFormat"/>
+                  <param name="outputFormat" value="$outputFormat"/>
+               </event>
+               <event xml:id="fC_08" type="researchStep" ref="../steps/step_verifyOutput.xml#step_verifyOutput">
+                  <param name="outputFormat" value="$outputFormat"/>
+               </event>
+            </listEvent>
+            <!-- this scenario needs an addition: a list of tags/format and methods for their verification + potential deprecation notices -->
+         </div>
+      </body>
+   </text>
+</TEI>
