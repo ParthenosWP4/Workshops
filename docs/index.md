@@ -1,16 +1,14 @@
 
-The Standardization Survival Kit: presentation
-==============================================
+# The Standardization Survival Kit
+## Hands-on Workshop
 
-SSK components
---------------
+
+
+## SSK components : Scenarios < Steps < Resources
 
 The SSK is a web platform builded on three main layers nested within
 each other following a specific order: Research scenarios, steps and
 resources.
-
-### Scenarios < Steps < Resources
-
 
 Each **scenario** within the SSK works like a high-level research guide
 for scholars. They are made up of successive **steps** or tasks, and can
@@ -36,7 +34,7 @@ material contained in these sections is of various kinds:
    services.
 -  **Training materials** such as tutorials.
 
-### How to create a scenario for the SSK
+## How to create a scenario for the SSK
 
 The following instructions help users create a scenario for the SSK.
 These instructions are themselves conceived as a "scenario", a
@@ -72,9 +70,10 @@ The form of this text should respect the following constraints:
 * It shouldn't exceed 1500 characters (but should not be too short either).
 * It is possible to point to external links. In TEI, use the following code:
 
-``` xml
+```xml
 <ref target="//url here//">text of the link</ref>
 ```
+
 * Lists are also available. The TEI elements are <list> and <item>
 
 References:
@@ -141,11 +140,13 @@ References:
 
 There is different ways to link resources to a step. The one we favour is the recording of the resource metadata in the dedicated SSK Zotero Library (see [here](https://www.zotero.org/groups/427927/items?)).
 1. To populate it, a Zotero account is necessary (create it  [here](https://www.zotero.org/user/register>)) as well as a membership in the SSK group (apply [here](https://www.zotero.org/groups/427927/ssk-parthenos?>)). The SSK library is organized in collections and sub-collections, by domains or standards. To learn more about how to use Zotero, many tutorial and learning resources are available [here](https://www.zotero.org/support/screencast_tutorials).
-2. Each group of resources (general and project specific) should be gathered: One group for the general resources and one group for each project. In the TEI, these groups are represented by ``<linkGrp>`` elements.
-3. The references added to the Zotero Library are linked to the step with the help of their Zotero key, i.e. the last part of the URL of the resource record on the Zotero website. For instance, in the following example, the key is 4B62GJ5I: *https://www.zotero.org/groups/427927/ssk-parthenos/items/itemKey/4B62GJ5I*. In TEI, the Zotero key should be used like this:
+1. Each group of resources (general and project specific) should be gathered: One group for the general resources and one group for each project. In the TEI, these groups are represented by `<linkGrp>` elements.
+1. The references added to the Zotero Library are linked to the step with the help of their Zotero key, i.e. the last part of the URL of the resource record on the Zotero website. For instance, in the following example, the key is 4B62GJ5I: *https://www.zotero.org/groups/427927/ssk-parthenos/items/itemKey/4B62GJ5I*. In TEI, the Zotero key should be used like this:
+
 ```xml
 <ref type="zotero" key="4B62GJ5I"/ >
 ```
+
 4. It is possible to put directly the URL of a Github repository or a document stored in HAL, and skip the Zotero part (the metadata would be fetched directly via the APIs)
 5. It is possible and recommended to add a description of the resource, in addition of the Zotero metadata. This description should make the link between the resource and the SSK step that references it. In TEI, the element to use is `<desc>`, inside a `<ref>` element
 
