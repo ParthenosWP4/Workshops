@@ -71,7 +71,8 @@ The description of the scenario and its steps is the longer text that the contri
 The form of this text should respect the following constraints:
 * It shouldn't exceed 1500 characters (but should not be too short either).
 * It is possible to point to external links. In TEI, use the following code:
-```xml
+
+``` xml
 <ref target="//url here//">text of the link</ref>
 ```
 * Lists are also available. The TEI elements are <list> and <item>
