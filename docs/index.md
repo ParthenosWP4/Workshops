@@ -60,7 +60,7 @@ There is different ways to link resources to a step. The one we favour is the re
   1. One `<linkGrp>` for the general resources;
   1. one `<linkGrp>` for each project.
 1. The references added to the Zotero Library are linked to the step with the help of their Zotero key, i.e. the last part of the URL of the resource record on the Zotero website. For instance, in the following example, the key is `4B62GJ5I`: *https://www.zotero.org/groups/427927/ssk-parthenos/items/itemKey/4B62GJ5I*. In TEI, the Zotero key should be used like this:
-```xml
-<ref type="zotero" key="4B62GJ5I"/ >
+```
+<ref type="zotero" key="4B62GJ5I"/>
 ```
 4. It is possible to put directly the URL of a Github repository or a document stored in HAL, and skip the Zotero part (the metadata would be fetched directly via the APIs)
