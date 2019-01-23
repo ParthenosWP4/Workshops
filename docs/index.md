@@ -1,6 +1,5 @@
 
-# The Standardization Survival Kit
-## Hands-on Workshop
+# The Standardization Survival Kit // Hands-on Workshop
 
 These pages contain the resources needed to take workshops about the [Standardization Survival Kit](http://ssk.huma-num.fr).
 
@@ -25,9 +24,9 @@ These scenarios are at the core of the SSK, as they embed resources with context
 </object>
 
 ### SSK's survival kit
-* Website: http://ssk.huma-num.fr
-* Source: https://github.com/ParthenosWP4/SSK
-* Documentation: https://ssk.readthedocs.io
+* Website: [http://ssk.huma-num.fr](http://ssk.huma-num.fr)
+* Source: [https://github.com/ParthenosWP4/SSK](https://github.com/ParthenosWP4/SSK)
+* Documentation: [https://ssk.readthedocs.io](https://ssk.readthedocs.io)
 * Bibliography:
   * Charles Riondet, Dorian Seillier, Lionel Tadjou, Laurent Romary. Standardization Survival Kit (Final). [Technical Report] Inria Paris. 2018. [〈hal-01925144〉](https://hal.inria.fr/hal-01925144)
   * Marie Puren, Charles Riondet, Laurent Romary, Dorian Seillier, Lionel Tadjou. SSK by example. Make your Arts and Humanities research go standard. Digital Humanities 2018 : "Bridges/Puentes", Jun 2018, Mexico, Mexico. https://dh2018.adho.org/en/. [〈hal-01848882〉](https://hal.inria.fr/hal-01848882)
