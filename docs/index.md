@@ -16,6 +16,14 @@ The Standardization Survival Kit (SSK) is a tool that supports the digital evolu
 
 These scenarios are at the core of the SSK, as they embed resources with contextual information and relevant examples on standardized processes and methods in a research context. The SSK is an open tool where users are able to publish new scenarios or adapt existing ones. These scenarios can be seen as a living memory of what should be the best research practices in a given community, made accessible and reusable for other researchers.
 
+### A presentation of the SSK
+
+<object data="https://hal.archives-ouvertes.fr/hal-01850075/document" type="application/pdf" width="700px" height="700px">
+    <embed src="https://hal.archives-ouvertes.fr/hal-01850075/document">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://hal.archives-ouvertes.fr/hal-01850075/document">Download PDF</a>.</p>
+    </embed>
+</object>
+
 ### SSK's survival kit
 * Website: http://ssk.huma-num.fr
 * Source: https://github.com/ParthenosWP4/SSK
@@ -28,39 +36,26 @@ These scenarios are at the core of the SSK, as they embed resources with context
 
 ## Create a scenario
 
-### Scenario writing guidelines
+To help users create a scenario, two main resources are available:
 
-A tutorial with formal guidelines for creating a scenario can be found in the [SSK documentation](https://ssk.readthedocs.io/en/latest/1_tuto.html).
+* A tutorial;
+* The documentation of the SSK TEI model.
+
+### How to write a scenario for the SSK?
+
+A tutorial with formal guidelines for creating a scenario can be found in the SSK documentation:
+***[SSK Tutorial](https://ssk.readthedocs.io/en/latest/1_tuto.html)***
 
 ### Work with the TEI
 
-Scenarios and steps are encoded with the standard [XML-TEI](http://tei-c.org/). All the information displayed within the SSK proceed from TEI files, hosted on the GitHub repository:
-* scenarios: https://github.com/ParthenosWP4/SSK/tree/master/scenarios
-* steps: https://github.com/ParthenosWP4/SSK/tree/master/steps
-
-The documentation of the TEI data model can be found [here](https://ssk.readthedocs.io/en/latest/2_ssktei.html).
-
-Users willing to create scenarios in TEI should follow the following
+* Scenarios and steps are encoded with the standard [XML-TEI](http://tei-c.org/). All the information displayed within the SSK proceed from TEI files, hosted on the GitHub repository:
+  * scenarios: https://github.com/ParthenosWP4/SSK/tree/master/scenarios
+  * steps: https://github.com/ParthenosWP4/SSK/tree/master/steps
+* The documentation of the TEI data model can be found here:
+***[SSK TEI model](https://ssk.readthedocs.io/en/latest/2_ssktei.html)***
+* Users willing to create scenarios in TEI should follow the following
 instructions:
-
--  Download or fork the SSK data repository in GitHub. It is necessary to have an account on GitHub: https://github.com/ParthenosWP4/SSK/tree/master/ (NB: to fork a repository, a GitHub user account is necessary);
--  Create TEI files with your favourite XML editor. Don't forget to validate them against the SSK schema;
--  To publish scenarios on the SSK, the TEI files need to be in the *scenarios* and *steps* folders;
--  Users with a GitHub account can make a pull request to ask for the update of the repository. Users without an account can contact the SSK team at ssk [at] inria [dot] fr.
-
-
-### Add resources to the SSK Zotero Library
-
-There is different ways to link resources to a step. The one we favour is the recording of the resource metadata in the dedicated SSK Zotero Library: https://www.zotero.org/groups/427927/ssk-parthenos/
-
-1. To populate it, a Zotero account is necessary (create it  [here](https://www.zotero.org/user/register)) as well as a membership in the SSK group (apply [here](https://www.zotero.org/groups/427927/ssk-parthenos)).
-![zot1](img/zot2.jpg) The SSK library is organized in collections and sub-collections, by domains or standards. To learn more about how to use Zotero, many tutorial and learning resources are available [here](https://www.zotero.org/support/screencast_tutorials).
-![zot1](img/zot1.jpg)
-1. Each group of resources (general and project specific) should be gathered. In the TEI, these groups are represented by `<linkGrp>` elements:
-  1. One `<linkGrp>` for the general resources;
-  1. one `<linkGrp>` for each project.
-1. The references added to the Zotero Library are linked to the step with the help of their Zotero key, i.e. the last part of the URL of the resource record on the Zotero website. For instance, in the following example, the key is `4B62GJ5I`: *https://www.zotero.org/groups/427927/ssk-parthenos/items/itemKey/4B62GJ5I*. In TEI, the Zotero key should be used like this:
-```
-<ref type="zotero" key="4B62GJ5I"/>
-```
-4. It is possible to put directly the URL of a Github repository or a document stored in HAL, and skip the Zotero part (the metadata would be fetched directly via the APIs)
+  * Download or fork the SSK data repository in GitHub. It is necessary to have an account on GitHub: https://github.com/ParthenosWP4/SSK/tree/master/ (NB: to fork a repository, a GitHub user account is necessary);
+  * Create TEI files with your favourite XML editor. Don't forget to validate them against the SSK schema;
+  * To publish scenarios on the SSK, the TEI files need to be in the *scenarios* and *steps* folders;
+  * Users with a GitHub account can make a pull request to ask for the update of the repository. Users without an account can contact the SSK team at ssk [at] inria [dot] fr.

@@ -36,9 +36,8 @@
       </sourceDesc>
     </fileDesc>
     <revisionDesc>
-      <change>
-        <!-- Only for major changes: addition of an author, of a step, etc. -->
-      </change>
+      <change when="2019-01-31">Addition of a new author</change>
+      <change when="2019-02-01">New project resources linkGrp</change>
     </revisionDesc>
   </teiHeader>
   <text>

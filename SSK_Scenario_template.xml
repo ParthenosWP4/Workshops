@@ -2,96 +2,95 @@
 <?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- You have to type the TEI file, with researchStep or researchScenario -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchScenario" xml:id="SSK_Scenario_template">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <!-- Title of the tei document, not title of the scenario -->
-            <title>Title of the TEI document</title>
-            <author>
-               <persName>Author 1</persName>
-               <affiliation>Affiliation Author 1</affiliation>
-            </author>
-            <author>
-               <persName>Author 2</persName>
-               <affiliation>Affiliation Author 2</affiliation>
-            </author>
-            <sponsor/>
-         </titleStmt>
-         <publicationStmt>
-            <authority/>
-            <availability>
-              <!-- Choose the license CC-BY or CC-0
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <!-- Title of the tei document, not title of the scenario -->
+        <title>Title of the TEI document</title>
+        <author>
+          <persName>Author 1</persName>
+          <affiliation>Affiliation Author 1</affiliation>
+        </author>
+        <author>
+          <persName>Author 2</persName>
+          <affiliation>Affiliation Author 2</affiliation>
+        </author>
+        <sponsor/>
+      </titleStmt>
+      <publicationStmt>
+        <authority/>
+        <availability>
+          <!-- Choose the license CC-BY or CC-0
                 * http://creativecommons.org/licenses/by/4.0/
                 * https://creativecommons.org/publicdomain/zero/1.0/
                 <p>This document is in the public domain.</p>
               -->
-               <licence target="http://creativecommons.org/licenses/by/4.0/">
-                  <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to
-                     this document.</p>
-               </licence>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Created from scratch</p>
-         </sourceDesc>
-      </fileDesc>
-      <revisionDesc>
-         <change>
-            <!-- Only for major changes: addition of an author, of a step, etc. -->
-         </change>
-      </revisionDesc>
-   </teiHeader>
-   <text>
-      <body>
-         <div type="researchScenario" xml:id="sc_SSK_...">
-           <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
-            <head xml:lang="en" type="scenarioTitle">Title of the scenario</head>
-            <desc type="definition" xml:lang="en">Description of the scenario</desc>
-            <desc xml:lang="en" type="terms">
-              <term type="discipline" source="aurehal" key=""/>
-              <term type="object" source="tadirah" key=""/>
-              <term type="technique" source="tadirah" key=""/>
-            </desc>
-            <figure type="image">
-               <!-- Illustration of the scenario -->
-               <head>Title of the image</head>
-               <graphic url=""/>
-               <figDesc>License of the image (CC-BY, CC0, ...)</figDesc>
-            </figure>
-            <listEvent>
-              <!-- Possibility to add a "preliminary" scenario -->
-              <event ref="SSK_sc_digitization" type="researchScenario" subtype="preliminary"/>
-              
-               <event xml:id="s1" type="researchStep" ref="step_EaXswO_290517"/>
-               <event xml:id="s2" type="researchStep" ref="step_Eprimrf_300517"/>
-               <event xml:id="s3" type="researchStep" ref="step_Cad_300517"/>
-               <event xml:id="s4" type="researchStep" ref="step_Tdats_300517"/>
-               <event xml:id="s5" type="researchStep" ref="step_Sapditnf_300517">
-                 <!-- When reusing a step, it is possible to:
+          <licence target="http://creativecommons.org/licenses/by/4.0/">
+            <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to this
+              document.</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Created from scratch</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2019-01-31">A new step between ...</change>
+      <change when="2019-02-01">Addition of a new author</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="researchScenario" xml:id="sc_SSK_...">
+        <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
+        <head xml:lang="en" type="scenarioTitle">Title of the scenario</head>
+        <desc type="definition" xml:lang="en">Description of the scenario</desc>
+        <desc xml:lang="en" type="terms">
+          <term type="discipline" source="aurehal" key=""/>
+          <term type="object" source="tadirah" key=""/>
+          <term type="technique" source="tadirah" key=""/>
+        </desc>
+        <figure type="image">
+          <!-- Illustration of the scenario -->
+          <head>Title of the image</head>
+          <graphic url=""/>
+          <figDesc>License of the image (CC-BY, CC0, ...)</figDesc>
+        </figure>
+        <listEvent>
+          <!-- Possibility to add a "preliminary" scenario -->
+          <event ref="SSK_sc_digitization" type="researchScenario" subtype="preliminary"/>
+
+          <event xml:id="s1" type="researchStep" ref="step_EaXswO_290517"/>
+          <event xml:id="s2" type="researchStep" ref="step_Eprimrf_300517"/>
+          <event xml:id="s3" type="researchStep" ref="step_Cad_300517"/>
+          <event xml:id="s4" type="researchStep" ref="step_Tdats_300517"/>
+          <event xml:id="s5" type="researchStep" ref="step_Sapditnf_300517" mode="change">
+            <!-- When reusing a step, it is possible to:
                     * Change the "standard" terms in the <desc type="terms">
                     * Change the resources :
                         ADD some resources (mode="add")
                         DELETE some resource (mode="delete")
                  -->
-                 <desc xml:lang="en" type="terms">
-                   <term source="standardList" type="standard" key="CIDOC-CRM" mode="add"/>
-                   <term source="standardList" type="standard" key="LIDO" mode="delete"/>
-                 </desc>
-                 <linkGrp type="generalResources">
-                   <ref type="code" source="zotero" target="9SKJDJKS" mode="add"/>
-                   <ref type="code" source="zotero" target="9SKORJKS" mode="delete"/>
-                 </linkGrp>
-                 <linkGrp type="projectResources" source="CODATA" corresp="http://www.codata.org/">
-                   <ref type="code" source="zotero" target="9SKJDJKS" mode="add"/>
-                   <ref type="code" source="zotero" target="9SKORJKS" mode="delete"/>
-                 </linkGrp>
-               </event>
+            <desc xml:lang="en" type="terms" mode="change">
+              <term source="standardList" type="standard" key="CIDOC-CRM" mode="add"/>
+              <term source="standardList" type="standard" key="LIDO" mode="delete"/>
+            </desc>
+            <linkGrp type="generalResources" mode="change">
+              <ref type="code" source="zotero" target="9SKJDJKS" mode="add"/>
+              <ref type="code" source="zotero" target="9SKORJKS" mode="delete"/>
+            </linkGrp>
+            <linkGrp type="projectResources" source="CODATA" corresp="http://www.codata.org/">
+              <ref type="code" source="zotero" target="9SKJDJKS" mode="add"/>
+              <ref type="code" source="zotero" target="9SKORJKS" mode="delete"/>
+            </linkGrp>
+          </event>
 
-              <!-- Possibility to add a "follow up" scenario -->
-              <event ref="SSK_sc_mei" type="researchScenario" subtype="followUp"/>
-              
-            </listEvent>
-         </div>
-      </body>
-   </text>
+          <!-- Possibility to add a "follow up" scenario -->
+          <event ref="SSK_sc_mei" type="researchScenario" subtype="followUp"/>
+
+        </listEvent>
+      </div>
+    </body>
+  </text>
 </TEI>
