@@ -1,7 +1,4 @@
-
-# The Standardization Survival Kit // Hands-on Workshop
-
-These pages contain the resources needed to take workshops about the [Standardization Survival Kit](http://ssk.huma-num.fr).
+This page contains the resources needed to take workshops about the [Standardization Survival Kit](http://ssk.huma-num.fr).
 
 ## Purpose of the workshop
 
