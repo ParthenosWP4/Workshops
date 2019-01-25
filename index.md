@@ -1,9 +1,19 @@
 This page contains the resources needed to take workshops about the [Standardization Survival Kit](http://ssk.huma-num.fr).
 
-## Purpose of the workshop
+## Purpose of the workshops
 
 1. Stress the importance of documenting research best practices;
 1. Document them with the Standardization Survival Kit.
+
+The expected result of the SSK workshops is the creation and/or review research scenarios.
+
+#### Workshops work spaces
+
+Every workshop focuses on specific topics, and has its own workspace:
+1. **SSK Vienna Workshop, January 31st - February 1st 2019 // [Go to workshop space](Vienna19)**
+2. **SSK 3D Worksop (Marseille), February 25-27 2019 //
+  [Go to workshop space](Marseille19)**
+
 
 ## The SSK in 5 minutes
 
@@ -56,7 +66,7 @@ Scenarios and steps are encoded with the standard [XML-TEI](http://tei-c.org/). 
 
 #### Every TEI file must be validated against the [SSK TEI schema](https://ssk.readthedocs.io/en/latest/2_ssktei.html#schema).
 
-The link to add in the XML declaration is the following:
+In case you want to start from scratch, the link to add in the XML declaration is the following:
 https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
 
 ```xml
@@ -70,11 +80,4 @@ https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
   * [scenario template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_Scenario_template.xml)
   * [step template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_step_template.xml)
 
-#### Workshops work spaces
-
-The goal of the SSK workshops is to create and/or review research scenarios.
-
-Every workshop focuses on specific topics, and has its own workspace:
-1. SSK Vienna Workshop, January 31st - February 1st 2019 // [Go to workshop space](Vienna19)
-2. SSK 3D Worksop (Marseille), February 25-27 2019 // 
-  [Go to workshop space](Marseille19)
+#### Validate XML files
