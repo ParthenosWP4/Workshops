@@ -70,13 +70,11 @@ https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
   * [scenario template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_Scenario_template.xml)
   * [step template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_step_template.xml)
 
-#### Scenarios and steps corpora
+#### Workshops work spaces
 
-The goal of the SSK workshops is to create and/or review research scenarios. Below are listed scenarios related to a workshop topics, if applicable:
-1. SSK Vienna Workshop, January 31st - February 1st 2019
-  * [Corpus Modelling in TEI](../Vienna19/corpusModellinginTEI)
-  * [Create a dictionary in TEI](https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/dictionaryInTEI)
-  * [Digitization](https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/digitization)
-2. SSK 3D Worksop (Marseille), February 25-27 2019
-  * [Production of 3D objects](https://github.com/ParthenosWP4/Workshops/tree/master/Marseille19/3DObjectsProduction)
-  * [Preservation of 3D objects](https://github.com/ParthenosWP4/Workshops/tree/master/Marseille19/3DObjectsPreserving)
+The goal of the SSK workshops is to create and/or review research scenarios.
+
+Every workshop focuses on specific topics, and has its own workspace:
+1. SSK Vienna Workshop, January 31st - February 1st 2019 // [Go to workshop space](Vienna19)
+2. SSK 3D Worksop (Marseille), February 25-27 2019 // 
+  [Go to workshop space](Marseille19)
