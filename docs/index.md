@@ -74,17 +74,9 @@ https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
 
 The goal of the SSK workshops is to create and/or review research scenarios. Below are listed scenarios related to a workshop topics, if applicable:
 1. SSK Vienna Workshop, January 31st - February 1st 2019
-  * [Corpus Modelling in TEI](https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/corpusModellinginTEI)
+  * [Corpus Modelling in TEI](../Vienna19/corpusModellinginTEI)
   * [Create a dictionary in TEI](https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/dictionaryInTEI)
   * [Digitization](https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/digitization)
 2. SSK 3D Worksop (Marseille), February 25-27 2019
   * [Production of 3D objects](https://github.com/ParthenosWP4/Workshops/tree/master/Marseille19/3DObjectsProduction)
   * [Preservation of 3D objects](https://github.com/ParthenosWP4/Workshops/tree/master/Marseille19/3DObjectsPreserving)
-
-
-Users willing to create scenarios in TEI should follow the following
-instructions:
-  * Download or fork the SSK data repository in GitHub. It is necessary to have an account on GitHub: https://github.com/ParthenosWP4/SSK/tree/master/ (NB: to fork a repository, a GitHub user account is necessary);
-  * Create TEI files with your favourite XML editor. Don't forget to validate them against the SSK schema;
-  * To publish scenarios on the SSK, the TEI files need to be in the *scenarios* and *steps* folders;
-  * Users with a GitHub account can make a pull request to ask for the update of the repository. Users without an account can contact the SSK team at ssk [at] inria [dot] fr.
