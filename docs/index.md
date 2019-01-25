@@ -14,9 +14,9 @@ These scenarios are at the core of the SSK, as they embed resources with context
 
 ### A presentation of the SSK
 
-<object data="https://hal.archives-ouvertes.fr/hal-01850075/document" type="application/pdf" width="700px" height="700px">
-    <embed src="https://hal.archives-ouvertes.fr/hal-01850075/document">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://hal.archives-ouvertes.fr/hal-01850075/document">Download PDF</a>.</p>
+<object data="img/SSK_19_WS.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="img/SSK_19_WS.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="img/SSK_19_WS.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
@@ -34,22 +34,55 @@ These scenarios are at the core of the SSK, as they embed resources with context
 
 To help users create a scenario, two main resources are available:
 
-* A tutorial;
-* The documentation of the SSK TEI model.
+1. A tutorial;
+2. The documentation of the SSK TEI model.
 
 ### How to write a scenario for the SSK?
 
-A tutorial with formal guidelines for creating a scenario can be found in the SSK documentation:
+1. A tutorial with formal guidelines for creating a scenario can be found in the SSK documentation:
 ***[SSK Tutorial](https://ssk.readthedocs.io/en/latest/1_tuto.html)***
 
-### Work with the TEI
-
-* Scenarios and steps are encoded with the standard [XML-TEI](http://tei-c.org/). All the information displayed within the SSK proceed from TEI files, hosted on the GitHub repository:
-  * scenarios: https://github.com/ParthenosWP4/SSK/tree/master/scenarios
-  * steps: https://github.com/ParthenosWP4/SSK/tree/master/steps
-* The documentation of the TEI data model can be found here:
+1. The documentation of the TEI data model can be found here:
 ***[SSK TEI model](https://ssk.readthedocs.io/en/latest/2_ssktei.html)***
-* Users willing to create scenarios in TEI should follow the following
+
+
+### TEI workflow
+
+
+Scenarios and steps are encoded with the standard [XML-TEI](http://tei-c.org/). All the information displayed within the SSK proceed from TEI files, hosted on the GitHub repository:
+* scenarios: https://github.com/ParthenosWP4/SSK/tree/master/scenarios
+* steps: https://github.com/ParthenosWP4/SSK/tree/master/steps
+
+
+#### Every TEI file must be validated against the [SSK TEI schema](https://ssk.readthedocs.io/en/latest/2_ssktei.html#schema).
+
+The link to add in the XML declaration is the following:
+https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng"
+            type="application/xml"
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+```
+
+#### Template file for scenarios and steps can be used:
+  * [scenario template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_Scenario_template.xml)
+  * [step template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_step_template.xml)
+
+#### Scenarios and steps corpora
+
+The goal of the SSK workshops is to create and/or review research scenarios. Below are listed scenarios related to a workshop topics, if applicable:
+1. SSK Vienna Workshop, January 31st - February 1st 2019
+  * [Corpus Modelling in TEI](Vienna19/corpusModellinginTEI)
+  * [Create a dictionary in TEI](Vienna19/dictionaryInTEI)
+  * [Digitization](Vienna19/digitization)
+2. SSK 3D Worksop (Marseille), February 25-27 2019
+  * [Production of 3D objects](Marseille19/3DObjectsProduction)
+  * [Preservation of 3D objects](Marseille19/3DObjectsPreserving)
+
+
+Users willing to create scenarios in TEI should follow the following
 instructions:
   * Download or fork the SSK data repository in GitHub. It is necessary to have an account on GitHub: https://github.com/ParthenosWP4/SSK/tree/master/ (NB: to fork a repository, a GitHub user account is necessary);
   * Create TEI files with your favourite XML editor. Don't forget to validate them against the SSK schema;
