@@ -88,10 +88,10 @@ for report in listScReports:
                     treeSt = ssk.loadTree(filePathSt)
                     stepDiag = ssk.parseSVRL(svrlSt, treeSt)
                     try:
-                        ssk.writeCSV(stepDiag, input[3:], stepsFolder)
+                        ssk.writeCSV(stepDiag, inputSt[3:], stepsFolder)
                         lines.append(readMeLine)
                     except:
-                        print("Error writing CSV for" + input[3:])
+                        print("Error writing CSV for" + inputSt[3:])
 
                 except:
                     print("Error validating steps file: " + Id)
