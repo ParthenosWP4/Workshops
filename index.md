@@ -130,19 +130,20 @@ validation$ python validation.py ../Vienna19/corpusModellinginTEI ../Vienna19/co
 If the script runs successfully, it should create in *validation/* a new folder called  `reports_{Name of the scenario}_{date}_{time}`, containing reports for the scenarios checked and its steps.
 
 There is one folder per scenario with:
-* A readme file contains links to the TEI files on the SSK Github, so that you can identify quickly the file corresponding to the report:
-  **NB:** they share almost the same name => `theScenario.xml` // `theScenario_report.csv`
+* A readme file contains links to the TEI files on the SSK Github, so that you can identify quickly the file corresponding to the report:  
+**NB:** they share almost the same name: `theScenario.xml` // `theScenario_report.csv`
+
 * A csv table : the report for the scenario file
 * A folder containing the reports for each steps.
 
 These reports are tables that contain the following information, related to the XML file checked:
-* location:  In wich precise XML element the issue was raised
-* line: The line number of the previous location (Caveat, when the message is related to the root element TEI, there is no line number, but you have to check the root (between line 3 to 5, more or less)
-* role: Three possible values:
-  * error: Something is missing or badly formatted and needs to be corrected
-  * warning: It is strongly recommended to take the message into account, but it’s not mandatory
-  * information: The message gives a piece of information, but an action is not necessarily required.
-* message: A suggestion of what you could do to solve the problem (The most important)
+1. `location`:  In wich precise XML element the issue was raised;
+1. `line`: The line number of the previous location (Caveat, when the message is related to the root element TEI, there is no line number, but you have to check the root (between line 3 to 5, more or less);
+1. `role`: Three possible values:
+  * `error`: Something is missing or badly formatted and needs to be corrected;
+  * `warning`: It is strongly recommended to take the message into account, but it’s not mandatory;
+  * `information`: The message gives a piece of information, but an action is not necessarily required.
+1. `message`: A suggestion of what you could do to solve the problem (The most important).
 
 **Important note:**
 The messages listed in the tables are not always synonyms of errors in the file, you have to consider them rather like guidelines to check if the corresponding content is correct or not.
