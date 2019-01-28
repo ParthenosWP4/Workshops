@@ -3,12 +3,14 @@
 import subprocess
 import os
 import sys
+import re
 from bs4 import BeautifulSoup
 from datetime import datetime
 from ssk import schSSK
 
 CWD = os.path.dirname(os.path.abspath(__file__))
-SAXON = "resources/saxon9he.jar"
+rscPath = "resources"
+SAXON = os.path.join(rscPath, "saxon9he.jar")
 path_to_parser = os.path.join(CWD, SAXON)
 
 #parameter for input (scenarios and steps)
@@ -20,25 +22,32 @@ else:
     paramSt = sys.argv[2]
 
 ssk = schSSK()
-reportsFolder = "reports_" + paramSc.split("/")[-1] + "_" + str(datetime.now().strftime('%Y%m%d_%H%M%S'))
+scenarioName= re.split(r' |/|\\', paramSc)[-1]
+reportsFolder = "reports_" + scenarioName + "_" + str(datetime.now().strftime('%Y%m%d_%H%M%S'))
 
 # Add a control here to remove the scenarios marked as unstable ("unst")
+
 ssk.create_directory(reportsFolder)
 
 env = dict(os.environ)
 env["JAVA_OPTS"] = "foo"
 
+xslPrefix = "-xsl"
+schematronF = "-s:" + os.path.join(rscPath, "qualCheckSSK.sch")
+sch2xslF = xslPrefix + os.path.join(rscPath, "iso_svrl_for_xslt2.xsl")
+XSL2SVRL = "-o" + os.path.join(rscPath, "qualCheckSSK.xsl")
+
 try:
-    sch2xsl = subprocess.run(['java', '-jar', path_to_parser, '-s:resources/qualCheckSSK.sch', '-xsl:resources/iso_svrl_for_xslt2.xsl', '-o:resources/qualCheckSSK.xsl'], env=env)
+    sch2xsl = subprocess.run(['java', '-jar', path_to_parser, schematronF, sch2xslF, XSL2SVRL], env=env)
     try:
         inputSc = "-s:"+paramSc
-        scenariosFolder = os.getcwd() + "/" + reportsFolder + "/scenarios_temp"
+        scenariosFolder = os.path.join(os.getcwd(), reportsFolder, "scenarios_temp")
         ssk.create_directory(scenariosFolder)
-        if os.path.isdir(os.getcwd() + "/" + paramSc):
-            outputSc = "-o:"+scenariosFolder
-        elif os.path.isfile(os.getcwd() + "/" + paramSc):
-            outputSc = "-o:" + scenariosFolder + "/" + paramSc.split("/")[-1]
-        SVRLscenarios = subprocess.run(['java', '-jar', path_to_parser, inputSc, '-xsl:resources/qualCheckSSK.xsl', outputSc], env=env)
+        if os.path.isdir(os.path.join(os.getcwd(), paramSc)):
+            outputSc = "-o:" + scenariosFolder
+        elif os.path.isfile(os.path.join(os.getcwd(), paramSc)):
+            outputSc = "-o:" + os.path.join(scenariosFolder, scenarioName)
+        SVRLscenarios = subprocess.run(['java', '-jar', path_to_parser, inputSc, xslPrefix + XSL2SVRL, outputSc], env=env)
     except:
         print("Error validating scenarios files")
 except:
@@ -48,7 +57,7 @@ listScReports = ssk.get_files(scenariosFolder)
 
 for report in listScReports:
     reportFolderName = os.path.basename(os.path.normpath(report))[:-4]
-    reportFolder = reportsFolder + "/" + reportFolderName
+    reportFolder = os.path.join(reportsFolder, reportFolderName)
     ssk.create_directory(reportFolder)
     try:
         svrl = ssk.loadBS(report)
@@ -68,9 +77,9 @@ for report in listScReports:
             # Source file ../steps/SSK_sc_digitization.xml does not exist
             # Error validating steps files
 
-            stepsFolder = reportFolder + "/steps"
+            stepsFolder = os.path.join(reportFolder, "steps")
             ssk.create_directory(stepsFolder)
-            readmeFile = reportFolder + "/readme.txt"
+            readmeFile = os.path.join(reportFolder, "readme.txt")
             lines = ["steps checked:\n\n"]
             with open(readmeFile, "w") as f:
                 firstLine = "Validation report for https://github.com/ParthenosWP4/SSK/tree/master/scenarios/" + os.path.basename(os.path.normpath(report)) + "\n"
@@ -80,8 +89,8 @@ for report in listScReports:
                 readMeLine = "- Step https://github.com/ParthenosWP4/SSK/tree/master/steps/" + Id + "\n"
                 # ParseSVRL the steps corresponding to these IDs
                 try:
-                    inputSt = "-s:" + paramSt + "/" + Id
-                    query = "java -jar " + path_to_parser + " " + inputSt + " -xsl:resources/qualCheckSSK.xsl"
+                    inputSt = "-s:" + os.path.join(paramSt, Id)
+                    query = "java -jar " + path_to_parser + " " + inputSt + " "  + xslPrefix + XSL2SVRL
                     parseStep = subprocess.check_output(query, shell=True, env=env)
                     svrlSt = BeautifulSoup(parseStep, 'xml')
                     filePathSt = svrlSt.find('active-pattern')['document'][5:]
