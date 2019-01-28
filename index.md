@@ -81,3 +81,46 @@ https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
   * [step template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_step_template.xml)
 
 #### Validate XML files
+
+The validation of the SSK TEI files consists of two steps:
+* An classic XML validation with a RELAX NG schema
+* Content-oriented validation with Schematron.
+
+
+**1. The &lt;oXygen/&gt; XML Editor software makes it easy to validate TEI files.**
+
+To create a specific SSK validation scenario in &lt;oXygen/&gt;, see this page for more information: https://www.oxygenxml.com/doc/versions/18/ug-editor/tasks/create-validation-scenario.html
+
+**Important** It is necessary to specify the schema used (see the *Schema* section of the document linked above). The settings are the following:
+* Select `Use custom schema`
+* URL: https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
+* Schema Type:  `RELAX NG XML syntax`
+* Select `Embedded schematron rules`
+
+![Oxygen Validation scenario](img/oxygen1.jpg)
+
+NB: A trial version of &lt;oXygen/&gt; is available [here](https://www.oxygenxml.com/xml_editor/register.html)
+
+**2. It is also possible to generate a validation report with a Python script.**
+
+This method will output CSV reports with the schematron errors, but won't validate the XML.
+
+_Installation_
+
+* It requires Python 3.
+* [Clone](https://github.com/ParthenosWP4/Workshops.git) or [download](https://github.com/ParthenosWP4/Workshops/archive/master.zip) this repository (ParthenosWP4/Workshops).
+* On the console, go to the *validation/* folder
+* Run the following command
+```
+pip install -r requirements.txt
+```
+
+_Usage_
+
+Run the python script validation.py with two parameters:
+* the path to the **scenario** you want to validate as parameter 1
+* the path to **the folder of the steps** you want to validate as parameter 2
+
+```shell
+validation$ python validation.py ../Vienna19/corpusModellinginTEI ../Vienna19/corpusModellinginTEI/steps
+```

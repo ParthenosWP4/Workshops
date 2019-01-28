@@ -12,10 +12,12 @@ SAXON = "resources/saxon9he.jar"
 path_to_parser = os.path.join(CWD, SAXON)
 
 #parameter for input (scenarios and steps)
-if len(sys.argv) > 1:
-    paramSc = sys.argv[1]
+if len(sys.argv) != 3:
+    print("ERROR: You need to specify the path of the scenario and the steps you want to validate\nusage: $ python validation.py path-to-scenario path-to-steps")
+    exit()
 else:
-    paramSc = "../../scenarios"
+    paramSc = sys.argv[1]
+    paramSt = sys.argv[2]
 
 ssk = schSSK()
 reportsFolder = "reports_" + paramSc.split("/")[-1] + "_" + str(datetime.now().strftime('%Y%m%d_%H%M%S'))
@@ -78,7 +80,7 @@ for report in listScReports:
                 readMeLine = "- Step https://github.com/ParthenosWP4/SSK/tree/master/steps/" + Id + "\n"
                 # ParseSVRL the steps corresponding to these IDs
                 try:
-                    input = "-s:" + paramSc + "/steps/" + Id
+                    input = "-s:" + paramSt + "/" + Id
                     query = "saxon " + input + " -xsl:resources/qualCheckSSK.xsl"
                     parseStep = subprocess.check_output(query, shell=True)
                     svrlSt = BeautifulSoup(parseStep, 'xml')
