@@ -107,7 +107,7 @@ This method will output CSV reports with the schematron errors, but won't valida
 
 _Installation_
 
-* It requires Python 3.
+* It requires Python 3 (and pip) and Java (see [here](https://www.java.com/en/download/)).
 * [Clone](https://github.com/ParthenosWP4/Workshops.git) or [download](https://github.com/ParthenosWP4/Workshops/archive/master.zip) this repository (ParthenosWP4/Workshops).
 * On the console, go to the *validation/* folder
 * Run the following command

@@ -80,9 +80,9 @@ for report in listScReports:
                 readMeLine = "- Step https://github.com/ParthenosWP4/SSK/tree/master/steps/" + Id + "\n"
                 # ParseSVRL the steps corresponding to these IDs
                 try:
-                    input = "-s:" + paramSt + "/" + Id
-                    query = "saxon " + input + " -xsl:resources/qualCheckSSK.xsl"
-                    parseStep = subprocess.check_output(query, shell=True)
+                    inputSt = "-s:" + paramSt + "/" + Id
+                    query = "java -jar " + path_to_parser + " " + inputSt + " -xsl:resources/qualCheckSSK.xsl"
+                    parseStep = subprocess.check_output(query, shell=True, env=env)
                     svrlSt = BeautifulSoup(parseStep, 'xml')
                     filePathSt = svrlSt.find('active-pattern')['document'][5:]
                     treeSt = ssk.loadTree(filePathSt)
