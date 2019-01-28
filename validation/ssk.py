@@ -24,7 +24,7 @@ class schSSK:
         filesList = []  # liste fichiers
         for fileName in os.listdir(d):
             if fileName.endswith(".xml"):
-                filesList.append(d + "/" + fileName)
+                filesList.append(os.path.join(d, fileName))
         return filesList
 
     def loadBS(self, xmlfile):
@@ -88,7 +88,7 @@ class schSSK:
     def writeCSV(self, diagnostic, report, reportFolder):
         keys = diagnostic[0].keys()
         reportFile = re.search('\/(.+?)\.xml', report).group(1) + "_report.csv"
-        csvFile = reportFolder + "/" + os.path.basename(os.path.normpath(reportFile))
+        csvFile = os.path.join(reportFolder, os.path.basename(os.path.normpath(reportFile)))
 
         with open(csvFile, 'w') as output_file:
             dict_writer = csv.DictWriter(output_file, keys)

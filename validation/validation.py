@@ -24,7 +24,7 @@ else:
 ssk = schSSK()
 scenarioName= re.split(r' |/|\\', paramSc)[-1]
 reportsFolder = "reports_" + scenarioName + "_" + str(datetime.now().strftime('%Y%m%d_%H%M%S'))
-
+print(reportsFolder)
 # Add a control here to remove the scenarios marked as unstable ("unst")
 
 ssk.create_directory(reportsFolder)
@@ -32,13 +32,14 @@ ssk.create_directory(reportsFolder)
 env = dict(os.environ)
 env["JAVA_OPTS"] = "foo"
 
-xslPrefix = "-xsl"
+xslPrefix = "-xsl:"
+outputPrefix = "-o:"
 schematronF = "-s:" + os.path.join(rscPath, "qualCheckSSK.sch")
 sch2xslF = xslPrefix + os.path.join(rscPath, "iso_svrl_for_xslt2.xsl")
-XSL2SVRL = "-o" + os.path.join(rscPath, "qualCheckSSK.xsl")
+XSL2SVRL = os.path.join(rscPath, "qualCheckSSK.xsl")
 
 try:
-    sch2xsl = subprocess.run(['java', '-jar', path_to_parser, schematronF, sch2xslF, XSL2SVRL], env=env)
+    sch2xsl = subprocess.run(['java', '-jar', path_to_parser, schematronF, sch2xslF, outputPrefix + XSL2SVRL], env=env)
     try:
         inputSc = "-s:"+paramSc
         scenariosFolder = os.path.join(os.getcwd(), reportsFolder, "scenarios_temp")
