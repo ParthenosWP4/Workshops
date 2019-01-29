@@ -124,6 +124,8 @@ Run the python script validation.py with two parameters:
 ```shell
 validation$ python validation.py ../Vienna19/corpusModellinginTEI ../Vienna19/corpusModellinginTEI/steps
 ```
+**NB:** You may need to replace `python` by `python3`, depending on your installation.
+**NB2:** For Windows, you also need to use backslahes for the pathes (`..\Vienna19\corpusModellinginTEI`).
 
 ###### Result
 
