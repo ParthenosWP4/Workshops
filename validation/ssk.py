@@ -5,6 +5,7 @@ import os
 from lxml import etree as ET
 from bs4 import BeautifulSoup
 import csv
+from pathlib import Path
 
 class schSSK:
 
@@ -23,8 +24,9 @@ class schSSK:
     def get_files(self, d):
         filesList = []  # liste fichiers
         for fileName in os.listdir(d):
+            folder = Path(d)
             if fileName.endswith(".xml"):
-                filesList.append(os.path.join(d, fileName))
+                filesList.append(folder / fileName)
         return filesList
 
     def loadBS(self, xmlfile):

@@ -6,49 +6,53 @@ import sys
 import re
 from bs4 import BeautifulSoup
 from datetime import datetime
+from pathlib import Path
 from ssk import schSSK
 
-CWD = os.path.dirname(os.path.abspath(__file__))
-rscPath = "resources"
-SAXON = os.path.join(rscPath, "saxon9he.jar")
-path_to_parser = os.path.join(CWD, SAXON)
+
+CWD = Path.cwd()
+rscPath = Path("resources/")
+SAXON = rscPath / "saxon9he.jar"
+path_to_parser = CWD / SAXON
 
 #parameter for input (scenarios and steps)
 if len(sys.argv) != 3:
     print("ERROR: You need to specify the path of the scenario and the steps you want to validate\nusage: $ python validation.py path-to-scenario path-to-steps")
     exit()
 else:
-    paramSc = sys.argv[1]
-    paramSt = sys.argv[2]
+    paramSc = Path(sys.argv[1])
+    paramSt = Path(sys.argv[2])
 
 ssk = schSSK()
-scenarioName= re.split(r' |/|\\', paramSc)[-1]
+scenarioName= paramSc.name
 reportsFolder = "reports_" + scenarioName + "_" + str(datetime.now().strftime('%Y%m%d_%H%M%S'))
 print(reportsFolder)
 # Add a control here to remove the scenarios marked as unstable ("unst")
 
 ssk.create_directory(reportsFolder)
+reportsPath = Path(reportsFolder)
 
 env = dict(os.environ)
 env["JAVA_OPTS"] = "foo"
 
+sourcePrefix = "-s:"
 xslPrefix = "-xsl:"
 outputPrefix = "-o:"
-schematronF = "-s:" + os.path.join(rscPath, "qualCheckSSK.sch")
-sch2xslF = xslPrefix + os.path.join(rscPath, "iso_svrl_for_xslt2.xsl")
-XSL2SVRL = os.path.join(rscPath, "qualCheckSSK.xsl")
+
+schematronF =  rscPath / "qualCheckSSK.sch"
+sch2xslF = rscPath / "iso_svrl_for_xslt2.xsl"
+XSL2SVRL = rscPath / "qualCheckSSK.xsl"
 
 try:
-    sch2xsl = subprocess.run(['java', '-jar', path_to_parser, schematronF, sch2xslF, outputPrefix + XSL2SVRL], env=env)
+    sch2xsl = subprocess.run(['java', '-jar', str(path_to_parser), sourcePrefix+str(schematronF), xslPrefix+str(sch2xslF), outputPrefix+str(XSL2SVRL)], env=env)
     try:
-        inputSc = "-s:"+paramSc
-        scenariosFolder = os.path.join(os.getcwd(), reportsFolder, "scenarios_temp")
+        scenariosFolder = CWD / reportsFolder / "scenarios_temp"
         ssk.create_directory(scenariosFolder)
-        if os.path.isdir(os.path.join(os.getcwd(), paramSc)):
-            outputSc = "-o:" + scenariosFolder
-        elif os.path.isfile(os.path.join(os.getcwd(), paramSc)):
-            outputSc = "-o:" + os.path.join(scenariosFolder, scenarioName)
-        SVRLscenarios = subprocess.run(['java', '-jar', path_to_parser, inputSc, xslPrefix + XSL2SVRL, outputSc], env=env)
+        if os.path.isdir(CWD / paramSc):
+            outputSc = scenariosFolder
+        elif os.path.isfile(CWD / paramSc):
+            outputSc = scenariosFolder / scenarioName
+        SVRLscenarios = subprocess.run(['java', '-jar', str(path_to_parser), sourcePrefix+str(paramSc), xslPrefix+str(XSL2SVRL), outputPrefix+str(outputSc)], env=env)
     except:
         print("Error validating scenarios files")
 except:
@@ -58,18 +62,18 @@ listScReports = ssk.get_files(scenariosFolder)
 
 for report in listScReports:
     reportFolderName = os.path.basename(os.path.normpath(report))[:-4]
-    reportFolder = os.path.join(reportsFolder, reportFolderName)
-    ssk.create_directory(reportFolder)
+    reportFolder = reportsPath / reportFolderName
+    ssk.create_directory(str(reportFolder))
     try:
         svrl = ssk.loadBS(report)
         filePath = svrl.find('active-pattern')['document'][5:]
         tree = ssk.loadTree(filePath)
         diagnostic = ssk.parseSVRL(svrl, tree)
         try:
-            ssk.writeCSV(diagnostic, report, reportFolder)
+            ssk.writeCSV(diagnostic, str(report), str(reportFolder))
             #create ReadMe.txt
         except:
-            print("Error writing CSV for" + report)
+            print("Error writing CSV for" + str(report))
 
         if tree.getroot().get('type') == 'researchScenario':
             steps = tree.findall(".//{http://www.tei-c.org/ns/1.0}event")
@@ -78,9 +82,9 @@ for report in listScReports:
             # Source file ../steps/SSK_sc_digitization.xml does not exist
             # Error validating steps files
 
-            stepsFolder = os.path.join(reportFolder, "steps")
-            ssk.create_directory(stepsFolder)
-            readmeFile = os.path.join(reportFolder, "readme.txt")
+            stepsFolder = reportFolder / "steps"
+            ssk.create_directory(str(stepsFolder))
+            readmeFile = reportFolder / "readme.txt"
             lines = ["steps checked:\n\n"]
             with open(readmeFile, "w") as f:
                 firstLine = "Validation report for https://github.com/ParthenosWP4/SSK/tree/master/scenarios/" + os.path.basename(os.path.normpath(report)) + "\n"
@@ -90,15 +94,15 @@ for report in listScReports:
                 readMeLine = "- Step https://github.com/ParthenosWP4/SSK/tree/master/steps/" + Id + "\n"
                 # ParseSVRL the steps corresponding to these IDs
                 try:
-                    inputSt = "-s:" + os.path.join(paramSt, Id)
-                    query = "java -jar " + path_to_parser + " " + inputSt + " "  + xslPrefix + XSL2SVRL
+                    inputSt = paramSt / Id
+                    query = "java -jar " + str(path_to_parser) + " " + sourcePrefix + str(inputSt) + " "  + xslPrefix + str(XSL2SVRL)
                     parseStep = subprocess.check_output(query, shell=True, env=env)
                     svrlSt = BeautifulSoup(parseStep, 'xml')
                     filePathSt = svrlSt.find('active-pattern')['document'][5:]
                     treeSt = ssk.loadTree(filePathSt)
                     stepDiag = ssk.parseSVRL(svrlSt, treeSt)
                     try:
-                        ssk.writeCSV(stepDiag, inputSt[3:], stepsFolder)
+                        ssk.writeCSV(stepDiag, str(inputSt)[3:], str(stepsFolder))
                         lines.append(readMeLine)
                     except:
                         print("Error writing CSV for" + inputSt[3:])
