@@ -66,9 +66,13 @@ for report in listScReports:
     ssk.create_directory(str(reportFolder))
     try:
         svrl = ssk.loadBS(report)
-        filePath = Path(svrl.find('active-pattern')['document'][5:])
-        filePathString = str(filePath)
-        tree = ssk.loadTree(filePathString)
+        testedSc = svrl.find('active-pattern')['document'].split("/")[-1]
+        if os.path.isdir(CWD / paramSc):
+            filePath = str(paramSc / testedSc)
+        elif os.path.isfile(CWD / paramSc):
+            filePath = str(paramSc)
+
+        tree = ssk.loadTree(filePath)
         diagnostic = ssk.parseSVRL(svrl, tree)
         try:
             ssk.writeCSV(diagnostic, str(report), str(reportFolder))
@@ -99,8 +103,8 @@ for report in listScReports:
                     query = "java -jar " + str(path_to_parser) + " " + sourcePrefix + str(inputSt) + " "  + xslPrefix + str(XSL2SVRL)
                     parseStep = subprocess.check_output(query, shell=True, env=env)
                     svrlSt = BeautifulSoup(parseStep, 'xml')
-                    filePathSt = Path(svrlSt.find('active-pattern')['document'][5:])
-                    treeSt = ssk.loadTree(str(filePathSt))
+                    filePathSt = str(inputSt)
+                    treeSt = ssk.loadTree(filePathSt)
                     stepDiag = ssk.parseSVRL(svrlSt, treeSt)
                     try:
                         ssk.writeCSV(stepDiag, str(inputSt)[3:], str(stepsFolder))
