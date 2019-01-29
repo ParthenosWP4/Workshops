@@ -67,7 +67,8 @@ for report in listScReports:
     try:
         svrl = ssk.loadBS(report)
         filePath = Path(svrl.find('active-pattern')['document'][5:])
-        tree = ssk.loadTree(str(filePath))
+        filePathString = str(filePath)
+        tree = ssk.loadTree(filePathString)
         diagnostic = ssk.parseSVRL(svrl, tree)
         try:
             ssk.writeCSV(diagnostic, str(report), str(reportFolder))

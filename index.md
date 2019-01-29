@@ -139,7 +139,7 @@ There is one folder per scenario with:
 * A folder containing the reports for each steps.
 
 These reports are tables that contain the following information, related to the XML file checked:
-1. `location`:  In wich precise XML element the issue was raised;
+1. `location`:  In which precise XML element the issue was raised;
 1. `line`: The line number of the previous location (Caveat, when the message is related to the root element TEI, there is no line number, but you have to check the root (between line 3 to 5, more or less);
 1. `role`: Three possible values:
   * `error`: Something is missing or badly formatted and needs to be corrected;
