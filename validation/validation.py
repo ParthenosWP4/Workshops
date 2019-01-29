@@ -53,11 +53,11 @@ try:
         elif os.path.isfile(CWD / paramSc):
             outputSc = scenariosFolder / scenarioName
         SVRLscenarios = subprocess.run(['java', '-jar', str(path_to_parser), sourcePrefix+str(paramSc), xslPrefix+str(XSL2SVRL), outputPrefix+str(outputSc)], env=env)
-    except:
-        print("Error validating scenarios files")
-except:
-    print("Error transforming Schematron in XSLT")
+    except Exception as e:
+        print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
 
+except Exception as e:
+        print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
 listScReports = ssk.get_files(scenariosFolder)
 
 for report in listScReports:
@@ -66,14 +66,14 @@ for report in listScReports:
     ssk.create_directory(str(reportFolder))
     try:
         svrl = ssk.loadBS(report)
-        filePath = svrl.find('active-pattern')['document'][5:]
-        tree = ssk.loadTree(filePath)
+        filePath = Path(svrl.find('active-pattern')['document'][5:])
+        tree = ssk.loadTree(str(filePath))
         diagnostic = ssk.parseSVRL(svrl, tree)
         try:
             ssk.writeCSV(diagnostic, str(report), str(reportFolder))
             #create ReadMe.txt
-        except:
-            print("Error writing CSV for" + str(report))
+        except Exception as e:
+            print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
 
         if tree.getroot().get('type') == 'researchScenario':
             steps = tree.findall(".//{http://www.tei-c.org/ns/1.0}event")
@@ -98,21 +98,21 @@ for report in listScReports:
                     query = "java -jar " + str(path_to_parser) + " " + sourcePrefix + str(inputSt) + " "  + xslPrefix + str(XSL2SVRL)
                     parseStep = subprocess.check_output(query, shell=True, env=env)
                     svrlSt = BeautifulSoup(parseStep, 'xml')
-                    filePathSt = svrlSt.find('active-pattern')['document'][5:]
-                    treeSt = ssk.loadTree(filePathSt)
+                    filePathSt = Path(svrlSt.find('active-pattern')['document'][5:])
+                    treeSt = ssk.loadTree(str(filePathSt))
                     stepDiag = ssk.parseSVRL(svrlSt, treeSt)
                     try:
                         ssk.writeCSV(stepDiag, str(inputSt)[3:], str(stepsFolder))
                         lines.append(readMeLine)
-                    except:
-                        print("Error writing CSV for" + inputSt[3:])
+                    except Exception as e:
+                        print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
 
-                except:
-                    print("Error validating steps file: " + Id)
+
+                except Exception as e:
+                    print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
             with open(readmeFile, "a") as f:
                 f.writelines(lines)
 # https://github.com/ParthenosWP4/SSK/tree/master/steps/
-    except:
-        print("error "+report)
-
-subprocess.run(["rm", "-r", scenariosFolder])
+    except Exception as e:
+        print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
+subprocess.run(["rm", "-r", str(scenariosFolder)])

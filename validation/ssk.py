@@ -30,7 +30,7 @@ class schSSK:
         return filesList
 
     def loadBS(self, xmlfile):
-        with open(xmlfile) as file:
+        with open(xmlfile, encoding='utf-8') as file:
             testedFile = BeautifulSoup(file, 'xml')
             return testedFile
 
