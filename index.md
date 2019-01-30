@@ -80,6 +80,23 @@ https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
   * [scenario template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_Scenario_template.xml)
   * [step template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_step_template.xml)
 
+#### Other useful resources
+
+The SSK scenarios and steps are described with the help of selected vocabularies, among which the most relevant is the [TaDirAH Taxonomy](https://github.com/dhtaxonomy/TaDiRAH):
+
+* [Research activities](http://tadirah.dariah.eu/vocab/index.php?tema=6)
+* [Research techniques](http://tadirah.dariah.eu/vocab/index.php?tema=92)
+* [Research objects](http://tadirah.dariah.eu/vocab/index.php?tema=55)
+
+Other list of terms used in the SSK are:
+* [Standards](http://ssk.huma-num.fr/#/glossary/standards), from the SSK Standard Knowledge base (supported by DARIAH-IT)
+* [Disciplines](http://ssk.huma-num.fr/#glossary/disciplines), taken from [aureHAL](https://aurehal.archives-ouvertes.fr/domain/index)
+
+See the [SSK Glossary](http://ssk.huma-num.fr/#glossary/) for a complete overview of all available terms.
+
+It is possible to add new standards entries to the list.
+Copy the template file available [here](https://github.com/ParthenosWP4/SSK/blob/master/standardsKB/standardTemplate.json), fill the requested information (JSON syntax) and send it to `ssk [at] inria [dot] fr`
+
 #### Validate XML files
 
 The validation of the SSK TEI files consists of two steps:
