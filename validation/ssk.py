@@ -89,7 +89,7 @@ class schSSK:
 
     def writeCSV(self, diagnostic, report, reportFolder):
         keys = diagnostic[0].keys()
-        reportFile = re.search('\/(.+?)\.xml', report).group(1) + "_report.csv"
+        reportFile = str(report.split("/")[-1])[:-4] + "_report.csv"
         csvFile = os.path.join(reportFolder, os.path.basename(os.path.normpath(reportFile)))
 
         with open(csvFile, 'w') as output_file:

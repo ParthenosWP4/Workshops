@@ -120,4 +120,8 @@ for report in listScReports:
 # https://github.com/ParthenosWP4/SSK/tree/master/steps/
     except Exception as e:
         print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
-subprocess.run(["rm", "-r", str(scenariosFolder)])
+
+if sys.platform.startswith('win32' or 'cygwin'):
+    subprocess.run("del", "/S", "/Q", str(scenariosFolder))
+else:
+    subprocess.run(["rm", "-r", str(scenariosFolder)])
