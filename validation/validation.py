@@ -3,7 +3,7 @@
 import subprocess
 import os
 import sys
-import re
+import shutil
 from bs4 import BeautifulSoup
 from datetime import datetime
 from pathlib import Path
@@ -121,7 +121,4 @@ for report in listScReports:
     except Exception as e:
         print('Error on line {}'.format(sys.exc_info()[-1].tb_lineno), type(e).__name__, e)
 
-if sys.platform.startswith('win32' or 'cygwin'):
-    subprocess.run("del", "/S", "/Q", str(scenariosFolder))
-else:
-    subprocess.run(["rm", "-r", str(scenariosFolder)])
+shutil.rmtree(scenariosFolder)
