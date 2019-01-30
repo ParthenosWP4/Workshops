@@ -7,9 +7,9 @@ This page contains the resources needed to take workshops about the [Standardiza
 
 The expected result of the SSK workshops is the creation and/or review research scenarios.
 
-#### Workshops work spaces
+#### Workshops pages
 
-Every workshop focuses on specific topics, and has its own workspace:
+Each workshop focuses on specific topics, and has its own workspace:
 1. **SSK Vienna Workshop, January 31st - February 1st 2019 // [Go to workshop space](Vienna19)**
 2. **SSK 3D Worksop (Marseille), February 25-27 2019 //
   [Go to workshop space](Marseille19)**
