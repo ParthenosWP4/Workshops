@@ -80,7 +80,7 @@ https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
   * [scenario template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_Scenario_template.xml)
   * [step template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_step_template.xml)
 
-#### Other useful resources
+#### Keywords
 
 The SSK scenarios and steps are described with the help of selected vocabularies, among which the most relevant is the [TaDirAH Taxonomy](https://github.com/dhtaxonomy/TaDiRAH):
 
@@ -94,7 +94,19 @@ Other list of terms used in the SSK are:
 
 See the [SSK Glossary](http://ssk.huma-num.fr/#glossary/) for a complete overview of all available terms.
 
-It is possible to add new standards entries to the list.
+**New trick**
+
+In the [SSK Glossary](http://ssk.huma-num.fr/#glossary/), a button copies the exact TEI code:
+
+![TEI button for terms](img/buttonTerm.jpg)
+
+Clicking on the **&lt;/&gt;** symbol copies the following:
+
+```xml
+<term key="Archaeology and Prehistory" source="AureHAL" type="discipline"/>
+```
+
+**NB:** It is possible to add new standards entries to the list.
 Copy the template file available [here](https://github.com/ParthenosWP4/SSK/blob/master/standardsKB/standardTemplate.json), fill the requested information (JSON syntax) and send it to `ssk [at] inria [dot] fr`
 
 #### Validate XML files
