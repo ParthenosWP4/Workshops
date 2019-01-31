@@ -65,11 +65,11 @@
                <!-- Feature analysis from image capture -->
                <event ref="step_digdict_3" type="researchStep" xml:id="s3"/>
                <!-- Text capture (aka OCR)  -->
-               <event ref="step_digdict_4" type="researchStep" xml:id="s3"/>
+               <event ref="step_digdict_4" type="researchStep" xml:id="s4"/>
                <!-- Data modelling (and enrichment?!?) -->
-               <event ref="step_digdict_5" type="researchStep" xml:id="s3"/>
+               <event ref="step_digdict_5" type="researchStep" xml:id="s5"/>
                <!-- Encoding -->
-               <event ref="step_digdict_6" type="researchStep" xml:id="s3"/>
+               <event ref="step_digdict_6" type="researchStep" xml:id="s6"/>
                <!-- we keep the last two steps -->
                <event ref="step_digdict_7" type="researchStep" xml:id="s7"/>
                <event ref="step_digdict_8" type="researchStep" xml:id="s8"/>
