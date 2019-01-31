@@ -22,8 +22,8 @@ The Vienna workshop is hosted by the Austrian Centre for Digital Humanities at t
   </tr>
   <tr>
     <td>Corpus Modelling in TEI</td>
-    <td> <a href="http://ssk.huma-num.fr/#/scenarios/SSK_sc_corpusModellingInTEI-minusDigitization">http://ssk.huma-num.fr/#/scenarios/SSK_sc_corpusModellingInTEI-minusDigitization</a> </td>
-    <td> <a href="https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/corpusModellinginTEI"/>https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/corpusModellinginTEI</a> </td>
+    <td> <a href="http://ssk.huma-num.fr/#/scenarios/SSK_sc_corpusModellingInTEI-minusDigitization">http://ssk.huma-num.fr/#/scenarios/SSK_sc_corpusModellingInTEI-minusDigitization </a> </td>
+    <td> <a href="https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/corpusModellingInTEI"/>https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/corpusModellingInTEI</a> </td>
   </tr>
   <tr>
     <td>Create a dictionary in TEI</td>
