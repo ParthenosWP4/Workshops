@@ -17,6 +17,10 @@
                <persName>Lionel Tadjou</persName>
                <affiliation>Inria</affiliation>
             </author>
+            <author>
+               <persName>Laurent Romary</persName>
+               <affiliation>Inria</affiliation>
+            </author>
             <sponsor>Dariah</sponsor>
          </titleStmt>
          <publicationStmt>
@@ -42,9 +46,9 @@
             <event type="researchStep">
                <head xml:lang="en">Provide for long-term availability</head>
                <desc type="definition" xml:lang="en">Archive the dictionary in a repository providing for long-term and 
-                  free accessibility, such as  Zenodo. Archive the
+                  free accessibility, in a national repository, a CLARIN or DARIAH node or as default in Zenodo. Archive the
                   dictionary, the documentation (in ODD) and the stylesheets used for the
-                  post-processing and the publication.</desc>
+                  post-processing and the publication. One can consult r3data.org to find the appropriate repository</desc>
                <desc type="term" xml:lang="en">
                   <term key="Modeling" source="TaDiRAH" type="activity"/>
                </desc>

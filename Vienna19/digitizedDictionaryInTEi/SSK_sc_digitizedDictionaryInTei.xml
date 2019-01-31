@@ -39,9 +39,10 @@
    <text>
       <body>
          <div type="scenario">
-            <head type="scenarioTitle" xml:lang="en">Create a dictionary in TEI</head>
+            <head type="scenarioTitle" xml:lang="en">Create a digital edition in TEI of an existing dictionary</head>
+            <!-- cf. DARIAHteach -->
             <desc type="definition" xml:lang="en">This scenario sets out the best practices for
-               creating a born-digital dictionary, especially with the TEI (Text Encoding
+               creating a digital edition of an existing printed dictionary, especially with the TEI (Text Encoding
                Initiative). However, buiding a standardized lexicographical dataset is not only a
                data format problem, it is also an intellectual and technical process where one has
                to choose how to model their data, and with which tools operate in order to create an
@@ -57,11 +58,18 @@
                <figDesc>Photo by ActionVance on Unsplash.com</figDesc>
             </figure>
             <listEvent>
+               <!-- Planning: identify use case (conceptual phase - organisation phase) -->
+               <!-- Image capture:  -->
+               <!-- Feature analysis from image capture -->
+               <!-- Text capture (aka OCR)  -->
+               <!-- Data modelling (and enrichment?!?) -->
+               <!-- Encoding -->
                <event ref="step_dict_1" type="researchStep" xml:id="s1"/>
                <event ref="step_dict_2" type="researchStep" xml:id="s2"/>
                <event ref="step_dict_3" type="researchStep" xml:id="s3"/>
-               <event ref="step_dict_4" type="researchStep" xml:id="s4"/>
-               <event ref="step_dict_5" type="researchStep" xml:id="s5"/>
+               <!-- we keep the last two steps -->
+               <event ref="step_digdict_7" type="researchStep" xml:id="s7"/>
+               <event ref="step_digdict_8" type="researchStep" xml:id="s8"/>
             </listEvent>
          </div>
       </body>
