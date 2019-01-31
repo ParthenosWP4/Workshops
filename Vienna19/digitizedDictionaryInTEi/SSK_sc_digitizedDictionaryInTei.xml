@@ -23,8 +23,7 @@
             <authority>lexMC18</authority>
             <availability>
                <licence target="http://creativecommons.org/licenses/by/4.0/">
-                  <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to
-                     this document.</p>
+                  <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to this document.</p>
                </licence>
             </availability>
          </publicationStmt>
@@ -41,12 +40,10 @@
          <div type="scenario">
             <head type="scenarioTitle" xml:lang="en">Create a digital edition in TEI of an existing dictionary</head>
             <!-- cf. DARIAHteach -->
-            <desc type="definition" xml:lang="en">This scenario sets out the best practices for
-               creating a digital edition of an existing printed dictionary, especially with the TEI (Text Encoding
-               Initiative). However, buiding a standardized lexicographical dataset is not only a
-               data format problem, it is also an intellectual and technical process where one has
-               to choose how to model their data, and with which tools operate in order to create an
-               easy-to-use and sustainable resource.</desc>
+            <desc type="definition" xml:lang="en">This scenario sets out the best practices for creating a digital edition of an existing printed dictionary, especially with the TEI (Text Encoding
+               Initiative). However, buiding a standardized lexicographical dataset is not only a data format problem, it is also an intellectual and technical process where one has to choose how to
+               model their data, and with which tools operate in order to create an easy-to-use and sustainable resource. This scenario is inspired from the <ref
+                  target="https://teach.dariah.eu/mod/lesson/view.php?id=138">#dariahTeach Digitizing Dictionaries course</ref></desc>
             <desc type="terms" xml:lang="en">
                <term source="aureHAL" type="discipline" key="Linguistics"/>
                <term key="Encoding" source="tadirah" type="technique"/>
