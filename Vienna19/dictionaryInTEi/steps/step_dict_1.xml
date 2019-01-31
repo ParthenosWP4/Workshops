@@ -44,7 +44,7 @@
                <desc type="definition" xml:lang="en">The first step is to identify the structural
                   components of the dictionary and test if they can be represented in TEI. Some
                   steps to consider may be: <list>
-                     <item>Identify the apporpriate language code (ideally BCP 47) for the
+                     <item>Identify the appropriate language code (ideally BCP 47) for the
                         linguistic varieties involved in the dictionary project</item>
                      <item>Check the TEI guidelines (section 9, Dictionaries)</item>
                      <item>For existing dictionaries, try to find one example for all possible
