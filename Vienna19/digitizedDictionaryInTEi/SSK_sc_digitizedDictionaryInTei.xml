@@ -59,14 +59,17 @@
             </figure>
             <listEvent>
                <!-- Planning: identify use case (conceptual phase - organisation phase) -->
+               <event ref="step_digdict_1" type="researchStep" xml:id="s1"/>
                <!-- Image capture:  -->
+               <event ref="step_digdict_2" type="researchStep" xml:id="s2"/>
                <!-- Feature analysis from image capture -->
+               <event ref="step_digdict_3" type="researchStep" xml:id="s3"/>
                <!-- Text capture (aka OCR)  -->
+               <event ref="step_digdict_4" type="researchStep" xml:id="s3"/>
                <!-- Data modelling (and enrichment?!?) -->
+               <event ref="step_digdict_5" type="researchStep" xml:id="s3"/>
                <!-- Encoding -->
-               <event ref="step_dict_1" type="researchStep" xml:id="s1"/>
-               <event ref="step_dict_2" type="researchStep" xml:id="s2"/>
-               <event ref="step_dict_3" type="researchStep" xml:id="s3"/>
+               <event ref="step_digdict_6" type="researchStep" xml:id="s3"/>
                <!-- we keep the last two steps -->
                <event ref="step_digdict_7" type="researchStep" xml:id="s7"/>
                <event ref="step_digdict_8" type="researchStep" xml:id="s8"/>
