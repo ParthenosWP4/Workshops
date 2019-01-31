@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_I_06022018">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Step "Setting up the publishing environment"</title>
+            <author>
+               <persName>Karlheinz Mörth</persName>
+               <affiliation>OEAW-ACDH</affiliation>
+            </author>
+            <author>
+               <persName>Charles Riondet</persName>
+               <affiliation>Inria</affiliation>
+            </author>
+            <author>
+               <persName>Lionel Tadjou</persName>
+               <affiliation>Inria</affiliation>
+            </author>
+            <sponsor>Dariah</sponsor>
+         </titleStmt>
+         <publicationStmt>
+            <authority>lexMC18</authority>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/">
+                  <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to
+                     this document.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Created from scratch</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change/>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listEvent>
+            <event type="researchStep">
+               <head xml:lang="en">Setting up the publishing environment</head>
+               <desc type="definition" xml:lang="en">"For web publication, it may be necessary to
+                  set up a rich envirnomment with complex querying funcionalities. Tools like
+                  ElasticSearch can help provide such a framework, but require development skills.
+                  For printed output, you can choose betwen XSL-FO, CSS for Paged Media, LaTeX
+                  or InDesign Markup Language with postprocessing."</desc>
+               <desc type="term" xml:lang="en">
+                  <term key="Modeling" source="TaDiRAH" type="activity"/>
+                  <term type="standard" key="XSL"/>
+                  <term type="standard" key="CSS Paged Media"/>
+                  <term type="standard" key="XSL-FO"/>
+                  <term type="standard" key="Apache FOP"/>
+                  <term type="standard" key="InDesign Markup Language"/>
+               </desc>
+               <linkGrp type="generalResources">
+                  <ref source="zotero" target="H9NB3WI2" type="specification"/>
+                  <ref source="zotero" target="PZPN9Y2F" type="tool"/>
+                  <ref source="zotero" target="AF3ABSVQ" type="tool"/>
+               </linkGrp>
+            </event>
+         </listEvent>
+      </body>
+   </text>
+</TEI>
