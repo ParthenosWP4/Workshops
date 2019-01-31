@@ -60,14 +60,14 @@ To help users create a scenario, two main resources are available:
 
 
 Scenarios and steps are encoded with the standard [XML-TEI](http://tei-c.org/). All the information displayed within the SSK proceed from TEI files, hosted on the GitHub repository:
-* scenarios: https://github.com/ParthenosWP4/SSK/tree/master/scenarios
-* steps: https://github.com/ParthenosWP4/SSK/tree/master/steps
+* scenarios: [https://github.com/ParthenosWP4/SSK/tree/master/scenarios](https://github.com/ParthenosWP4/SSK/tree/master/scenarios)
+* steps: [https://github.com/ParthenosWP4/SSK/tree/master/steps](https://github.com/ParthenosWP4/SSK/tree/master/steps)
 
 
 #### Every TEI file must be validated against the [SSK TEI schema](https://ssk.readthedocs.io/en/latest/2_ssktei.html#schema).
 
 In case you want to start from scratch, the link to add in the XML declaration is the following:
-https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
+`https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
