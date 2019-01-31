@@ -76,6 +76,8 @@ https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng
             schematypens="http://relaxng.org/ns/structure/1.0"?>
 ```
 
+Or there is a local copy of the schema in `workshops/validation/resources/TEI_SSK_ODD.rng`
+
 #### Template file for scenarios and steps can be used:
   * [scenario template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_Scenario_template.xml)
   * [step template file](https://github.com/ParthenosWP4/Workshops/blob/master/SSK_step_template.xml)
