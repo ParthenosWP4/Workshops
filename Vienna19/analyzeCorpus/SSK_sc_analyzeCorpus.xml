@@ -58,7 +58,7 @@
             Susanne Haaf) - need a new image</figDesc>
         </figure>
         <listEvent>
-          <event ref="step_corpusComposition" type="researchStep" xml:id="s1"/>
+          <event ref="step_CaW" type="researchStep" xml:id="s1"/>
         </listEvent>
       </div>
     </body>
