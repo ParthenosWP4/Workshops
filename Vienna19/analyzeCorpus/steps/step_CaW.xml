@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     type="researchStep"
+     xml:id="step_CaW">
+    <teiHeader>
+      <fileDesc>
+        <titleStmt>
+          <title>Step \"Create a wordlist\"</title>
+          <author>
+            <persName>Klaus Illmayer</persName>
+            <affiliation>OEAW-ACDH</affiliation>
+          </author>
+          <author>
+            <persName>Veronique De Tier</persName>
+            <affiliation>UGhent</affiliation>
+          </author>
+          <author>
+            <persName>Sasa Marjanovic</persName>
+            <affiliation>University of Belgrade</affiliation>
+          </author>
+          <author>
+            <persName>Sandrine Peraldi</persName>
+            <affiliation>UCD</affiliation>
+          </author>
+          <sponsor>DARIAH-EU</sponsor>
+        </titleStmt>
+      <publicationStmt>
+        <authority>DARIAH-EU</authority>
+        <availability>
+          <licence target="http://creativecommons.org/licenses/by/4.0/">
+            <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to this
+              document.</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Created at workshop Vienna19</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc><!-- Use only for major changes -->
+       <change/>
+    </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listEvent>
+            <event type="researchStep">
+               <head type="stepTitle" xml:lang="en">Create a wordlist</head>
+               <desc type="definition" xml:lang="en">Creating a wordlist is a basic functionality of a concordance program.
+                 After uploading your own corpus or selecting an already available corpus usually the first step consists
+                 in looking at the most frequent items of the corpus. Select the minimum and maximum frequency.
+                 You can also apply a stoplist if you wish to filter the terms.</desc>
+               <desc xml:lang="en" type="terms">
+                  <term type="object" source="http://tadirah.dariah.eu/" key="text"/>
+               </desc>
+               <linkGrp type="generalResources">
+                  <ref type="software" source="zotero" target="ZQD8HRGT">
+                     <term type="software" key="SketchEngine"/>
+                  </ref>
+               </linkGrp>
+            </event>
+         </listEvent>
+      </body>
+   </text>
+</TEI>

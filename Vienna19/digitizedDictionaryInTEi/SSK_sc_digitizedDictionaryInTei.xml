@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchScenario" xml:id="id_0_test">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>"Create a dictionary in TEI" scenario</title>
+            <author>
+               <persName>Karlheinz Mörth</persName>
+               <affiliation>OEAW-ACDH</affiliation>
+            </author>
+            <author>
+               <persName>Charles Riondet</persName>
+               <affiliation>Inria</affiliation>
+            </author>
+            <author>
+               <persName>Lionel Tadjou</persName>
+               <affiliation>Inria</affiliation>
+            </author>
+            <sponsor>Dariah</sponsor>
+         </titleStmt>
+         <publicationStmt>
+            <authority>lexMC18</authority>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by/4.0/">
+                  <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to this document.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Created from scratch</p>
+         </sourceDesc>
+      </fileDesc>
+      <revisionDesc>
+         <change/>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="scenario">
+            <head type="scenarioTitle" xml:lang="en">Create a digital edition in TEI of an existing dictionary</head>
+            <!-- cf. DARIAHteach -->
+            <desc type="definition" xml:lang="en">This scenario sets out the best practices for creating a digital edition of an existing printed dictionary, especially with the TEI (Text Encoding
+               Initiative). However, buiding a standardized lexicographical dataset is not only a data format problem, it is also an intellectual and technical process where one has to choose how to
+               model their data, and with which tools operate in order to create an easy-to-use and sustainable resource. This scenario is inspired from the <ref
+                  target="https://teach.dariah.eu/mod/lesson/view.php?id=138">#dariahTeach Digitizing Dictionaries course</ref></desc>
+            <desc type="terms" xml:lang="en">
+               <term source="aureHAL" type="discipline" key="Linguistics"/>
+               <term key="Encoding" source="tadirah" type="technique"/>
+               <term type="standard" key="TEI" source="SSK"/>
+            </desc>
+            <figure type="image">
+               <head/>
+               <graphic url="https://images.unsplash.com/photo-1530970279610-8234f88384c3"/>
+               <figDesc>Photo by ActionVance on Unsplash.com</figDesc>
+            </figure>
+            <listEvent>
+               <!-- Planning: identify use case (conceptual phase - organisation phase) -->
+               <event ref="step_digdict_1" type="researchStep" xml:id="s1"/>
+               <!-- Image capture:  -->
+               <event ref="step_digdict_2" type="researchStep" xml:id="s2"/>
+               <!-- Feature analysis from image capture -->
+               <event ref="step_digdict_3" type="researchStep" xml:id="s3"/>
+               <!-- Text capture (aka OCR)  -->
+               <event ref="step_digdict_4" type="researchStep" xml:id="s4"/>
+               <!-- Data modelling (and enrichment?!?) -->
+               <event ref="step_digdict_5" type="researchStep" xml:id="s5"/>
+               <!-- Encoding -->
+               <event ref="step_digdict_6" type="researchStep" xml:id="s6"/>
+               <!-- we keep the last two steps -->
+               <event ref="step_digdict_7" type="researchStep" xml:id="s7"/>
+               <event ref="step_digdict_8" type="researchStep" xml:id="s8"/>
+            </listEvent>
+         </div>
+      </body>
+   </text>
+</TEI>
