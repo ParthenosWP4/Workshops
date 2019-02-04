@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchScenario"
-  xml:id="SSK_sc_corpusModellingInTEI-minusDigitization">
+  xml:id="SSK_sc_linguisticAnnotationOfCorpora">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -86,9 +86,6 @@
           user. </desc>
         <desc type="terms" xml:lang="en">
           <term source="aurehal" type="discipline">Linguistics</term>
-          <term key="Discovering" source="Tadirah" type="activity"/>
-          <term key="Editing" source="Tadirah" type="activity"/>
-          <term key="Annotating" source="Tadirah" type="activity"/>
           <term key="Cluster Analysis" source="Tadirah" type="technique"/>
           <term key="Collocation Analysis" source="Tadirah" type="technique"/>
           <term key="Concordancing" source="Tadirah" type="technique"/>
@@ -100,11 +97,10 @@
           <term key="text" source="Tadirah" type="object"/>
         </desc>
         <figure type="image">
-          <head>Illustrative image of the scenario</head>
+          <head>Quranic Arabic Grammar - dependency syntax tree from the Quranic Arabic Corpus</head>
           <graphic
-            url="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/img/corpusAnalysis_compact.png"/>
-          <figDesc>Combination of screenshots of different steps in the scenario (image created by
-            Susanne Haaf)</figDesc>
+            url="https://upload.wikimedia.org/wikipedia/commons/5/5c/Quranic-arabic-corpus.png"/>
+          <figDesc>Photo by Arabismo (Creative Commons Attribution 3.0 Unported)</figDesc>
         </figure>
         <listEvent>
           <event ref="step_tokenizing" type="researchStep" xml:id="s1"/>
