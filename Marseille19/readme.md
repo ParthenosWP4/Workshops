@@ -4,6 +4,12 @@
 
 [Explanations, tutorials, etc.](../)
 
+## Shared space 
+
+You can put your work into this <a href="https://drive.google.com/drive/folders/1cvce4UbA-uf2T0Vx7qbUJweUpN11TI9U?usp=sharing">folder</a>.
+You will also find a model for creating a new scenario. 
+
+
 ## Relevant scenarios
 
 <table>
