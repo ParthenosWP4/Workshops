@@ -7,12 +7,13 @@ This page contains the resources needed to take workshops about the [Standardiza
 
 The expected result of the SSK workshops is the creation and/or review research scenarios.
 
-#### Workshops pages
+#### Workshops
 
-Each workshop focuses on specific topics, and has its own workspace:
-1. **SSK Vienna Workshop, January 31st - February 1st 2019 // [Go to workshop space](Vienna19)**
+1. **SSK Vienna Workshop, January 31st - February 1st 2019 // [Workshop space](Vienna19)**
 2. **SSK 3D Worksop (Marseille), February 25-27 2019 //
-  [Go to workshop space](Marseille19)**
+  [Workshop space](Marseille19)**
+3. **SSK, Research practices in a digital environment (Athens), May 10 2019**
+4. **SSK workshop on Archaeological data (Tours), May 23-24 2019**
 
 
 ## The SSK in 5 minutes
@@ -42,21 +43,24 @@ These scenarios are at the core of the SSK, as they embed resources with context
 
 ## Create a scenario
 
-To help users create a scenario, two main resources are available:
-
-1. A tutorial;
-2. The documentation of the SSK TEI model.
-
 ### How to write a scenario for the SSK?
 
-1. A tutorial with formal guidelines for creating a scenario can be found in the SSK documentation:
+A tutorial with formal guidelines for creating a scenario can be found in the SSK documentation:
 ***[SSK Tutorial](https://ssk.readthedocs.io/en/latest/1_tuto.html)***
 
-1. The documentation of the TEI data model can be found here:
-***[SSK TEI model](https://ssk.readthedocs.io/en/latest/2_ssktei.html)***
 
+### SSK user interface
+
+A user interface to create scenarios is under development.  
+In the context of workshops, a temporary access to a beta version is granted.  
+The full public version will be available soon.
+
+
+## [Old fashioned] Creating scenarios in XML-TEI
 
 ### TEI workflow
+The documentation of the TEI data model can be found here:
+***[SSK TEI model](https://ssk.readthedocs.io/en/latest/2_ssktei.html)***
 
 
 Scenarios and steps are encoded with the standard [XML-TEI](http://tei-c.org/). All the information displayed within the SSK proceed from TEI files, hosted on the GitHub repository:
@@ -95,8 +99,6 @@ Other list of terms used in the SSK are:
 * [Disciplines](http://ssk.huma-num.fr/#glossary/disciplines), taken from [aureHAL](https://aurehal.archives-ouvertes.fr/domain/index)
 
 See the [SSK Glossary](http://ssk.huma-num.fr/#glossary/) for a complete overview of all available terms.
-
-**New trick**
 
 In the [SSK Glossary](http://ssk.huma-num.fr/#glossary/), a button copies the exact TEI code:
 

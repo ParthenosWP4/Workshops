@@ -96,7 +96,7 @@
                <event ref="step_SMF_06022018" type="researchStep" xml:id="s6"/>
                <event ref="step_PP_06022018" type="researchStep" xml:id="s7"/>
                <event ref="step_SEF_06022018" type="researchStep" xml:id="s8"/>
-               <event ref="step_DTM_06022018" type="researchStep" xml:id="s9"/>
+               <!--<event ref="step_DTM_06022018" type="researchStep" xml:id="s9"/>-->
             </listEvent>
          </div>
       </body>

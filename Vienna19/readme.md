@@ -36,3 +36,38 @@ The Vienna workshop is hosted by the Austrian Centre for Digital Humanities at t
     <td> <a href="https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/digitization">https://github.com/ParthenosWP4/Workshops/tree/master/Vienna19/digitization</a> </td>
   </tr>
 </table>
+
+## New scenarios
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>SSK link</th>
+    <th>Source (specific workshop copy)</th>
+  </tr>
+  <tr>
+    <td>Analyse Corpus</td>
+    <td> </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Create a digital edition in TEI of an existing dictionary</td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>Linguistic annotation of corpora </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>Extract textual content from images </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td>
+  </tr>
+</table>

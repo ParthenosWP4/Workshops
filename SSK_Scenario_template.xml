@@ -55,7 +55,7 @@
           <!-- Illustration of the scenario -->
           <head>Title of the image</head>
           <graphic url=""/>
-          <figDesc>License of the image (CC-BY, CC0, ...)</figDesc>
+          <figDesc><author></author><availability><licence/></availability></figDesc>
         </figure>
         <listEvent>
           <!-- Possibility to add a "preliminary" scenario -->
@@ -76,11 +76,11 @@
               <term source="standardList" type="standard" key="CIDOC-CRM" mode="add"/>
               <term source="standardList" type="standard" key="LIDO" mode="delete"/>
             </desc>
-            <linkGrp type="generalResources" mode="change">
+            <linkGrp type="generalResources" mode="change" xml:base="https://www.zotero.org/groups/427927/ssk-parthenos/">
               <ref type="code" source="zotero" target="9SKJDJKS" mode="add"/>
               <ref type="code" source="zotero" target="9SKORJKS" mode="delete"/>
             </linkGrp>
-            <linkGrp type="projectResources" source="CODATA" corresp="http://www.codata.org/">
+            <linkGrp type="projectResources" source="CODATA" corresp="http://www.codata.org/" xml:base="https://www.zotero.org/groups/427927/ssk-parthenos/">
               <ref type="code" source="zotero" target="9SKJDJKS" mode="add"/>
               <ref type="code" source="zotero" target="9SKORJKS" mode="delete"/>
             </linkGrp>

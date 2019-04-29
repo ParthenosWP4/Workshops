@@ -95,8 +95,12 @@ for report in listScReports:
                 firstLine = "Validation report for https://github.com/ParthenosWP4/SSK/tree/master/scenarios/" + os.path.basename(os.path.normpath(report)) + "\n"
                 f.write(firstLine)
             for step in steps:
-                Id = str(step.get("ref")) + ".xml"
-                readMeLine = "- Step https://github.com/ParthenosWP4/SSK/tree/master/steps/" + Id + "\n"
+                if step.get("type") == "researchScenario":
+                    Id = str(step.get("ref")) + ".xml"
+                    readMeLine = "- Step https://github.com/ParthenosWP4/SSK/tree/master/scenarios/" + Id + "\n"
+                else:
+                    Id = str(step.get("ref")) + ".xml"
+                    readMeLine = "- Step https://github.com/ParthenosWP4/SSK/tree/master/steps/" + Id + "\n"
                 # ParseSVRL the steps corresponding to these IDs
                 try:
                     inputSt = paramSt / Id
