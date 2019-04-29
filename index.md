@@ -56,7 +56,7 @@ In the context of workshops, a temporary access to a beta version is granted.
 The full public version will be available soon.
 
 
-## [Old fashioned] Creating scenarios in XML-TEI
+## *[Old fashioned] Creating scenarios in XML-TEI*
 
 ### TEI workflow
 The documentation of the TEI data model can be found here:
