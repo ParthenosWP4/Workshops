@@ -24,6 +24,7 @@ The form is available at http://ssk.huma-num.fr/#/add-resource:
 * On click appreas a message like *"Resource has been succefull add to SSK's Zotero library with itemKey: HBGFXSLQ"*
 * Users have to copy the itemKey code (8 alphanumerical characters) in case they want to link the resource to a step.
 
+## Admin part
 **Admin** triggers SSK webhook on the last commmit (no need to ), with Postman.
 * Find the payload of the last commit at https://github.com/ParthenosWP4/SSK/settings/hooks/96111354
 * copy the payload
