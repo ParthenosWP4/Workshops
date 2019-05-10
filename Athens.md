@@ -7,7 +7,7 @@ Program
 - 10:15 Presentation 2:  [The SSK](https://docs.google.com/presentation/d/1wT7UFBtETMqqPpl8pY3st0SAbnulXAKeUaS1pfue_m8/edit?usp=sharing), Bringing best practices to research communities in the Humanities
 - 11:00 Discussion
 - 11:30 Short demo
-- 11:45 Group work A [(workflow)](workflow.md) // (template)[https://drive.google.com/drive/folders/1fRQsJGGYMYvkWbZm7ZEXnqVgnlqP3_BL?usp=sharing]
+- 11:45 Group work A [(workflow)](workflow.md) // [template](https://drive.google.com/drive/folders/1fRQsJGGYMYvkWbZm7ZEXnqVgnlqP3_BL?usp=sharing)
 - 12:45 Lunch break
 - 13:45 Group work B
 - 14:30 last summary discussion
