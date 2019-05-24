@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="validation/resources/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!-- You have to type the TEI file, with researchStep or researchScenario -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_cttvc_24052019">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <!-- Title of the tei document, not title of the scenario -->
+        <title>Step \"Convert texture to vertex color\"</title>
+        <author>
+          <persName>Christoph Hoffmann</persName>
+          <affiliation>OEAW-ACDH</affiliation>
+        </author>
+        <author>
+          <persName>Klaus Illmayer</persName>
+          <affiliation>OEAW-ACDH</affiliation>
+        </author>
+        <sponsor>DARIAH-EU</sponsor>
+      </titleStmt>
+      <publicationStmt>
+        <authority>DARIAH-EU</authority>
+        <availability>
+          <!-- Choose the license CC-BY or CC-0
+                * http://creativecommons.org/licenses/by/4.0/
+                * https://creativecommons.org/publicdomain/zero/1.0/
+                <p>This document is in the public domain.</p>
+              -->
+          <licence target="http://creativecommons.org/licenses/by/4.0/">
+            <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to this
+              document.</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Created at SSK workshop Tours 2019</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change when="2019-05-24">Initial creation of step</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <listEvent>
+        <event type="researchStep">
+          <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
+          <head type="stepTitle" xml:lang="en">Convert texture to vertex color</head>
+          <desc type="definition" xml:lang="en">This is an optional step. If your 3D object contains an external
+            texture file, transfer the texture to vertex colors.</desc>
+          <desc xml:lang="en" type="terms">
+            <term type="activity" source="tadirah" key="conversion"/>
+          </desc>
+          <linkGrp type="generalResources">
+            <ref type="tool" source="zotero" target="RE6ZCXN9"/>
+            <ref type="tutorial" source="zotero" target="WY48CVYG"/>
+          </linkGrp>
+        </event>
+      </listEvent>
+    </body>
+  </text>
+</TEI>
