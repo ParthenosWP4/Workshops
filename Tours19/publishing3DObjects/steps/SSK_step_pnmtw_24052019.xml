@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="validation/resources/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- You have to type the TEI file, with researchStep or researchScenario -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_cttvc_24052019">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_pnmtw_24052019">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <!-- Title of the tei document, not title of the scenario -->
-        <title>Step \"Convert texture to vertex color\"</title>
+        <title>Step \"Publish Nexus model to website\"</title>
         <author>
           <persName>Christoph Hoffmann</persName>
           <affiliation>OEAW-ACDH</affiliation>
@@ -44,15 +44,17 @@
       <listEvent>
         <event type="researchStep">
           <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
-          <head type="stepTitle" xml:lang="en">Convert texture to vertex color</head>
-          <desc type="definition" xml:lang="en">This is an optional step. If your 3D object contains an external
-            texture file, transfer the texture to vertex colors.</desc>
+          <head type="stepTitle" xml:lang="en">Publish Nexus model to website</head>
+          <desc type="definition" xml:lang="en">Upload your Nexus model to a website with the necessary
+            3DHop setup.</desc>
           <desc xml:lang="en" type="terms">
-            <term type="activity" source="tadirah" key="conversion"/>
+            <term type="standard" source="ssk" key="NXS"/>
+            <term type="standard" source="ssk" key="NXZ"/>
+            <term type="activity" source="tadirah" key="publishing"/>
           </desc>
           <linkGrp type="generalResources">
-            <ref type="tool" source="zotero" target="3JVDM8IA"/>
-            <ref type="tutorial" source="zotero" target="WY48CVYG"/>
+            <ref type="tool" source="zotero" target="SG86ZG5J"/>
+            <ref type="tutorial" source="zotero" target="7R4HUMWW"/>
           </linkGrp>
         </event>
       </listEvent>

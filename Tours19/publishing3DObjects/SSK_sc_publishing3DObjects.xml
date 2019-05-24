@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/spec/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- You have to type the TEI file, with researchStep or researchScenario -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchScenario" xml:id="SSK_Scenario_template">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchScenario" xml:id="sc_publishing3DObjects">
   <teiHeader>
     <fileDesc>
       <titleStmt>
@@ -44,7 +44,10 @@
       <div type="researchScenario" xml:id="sc_SSK_publishing3DObjects">
         <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
         <head xml:lang="en" type="scenarioTitle">Webpublishing of 3D Objects in Nexus-Format</head>
-        <desc type="definition" xml:lang="en">Description of the scenario (TODO)</desc>
+        <desc type="definition" xml:lang="en">In order to make 3D Objects web accessible, they need to be both reduced in size
+            as well as converted to a web accessible format. One of the toolsets providing this is the 3DHop presenter and
+            the affiliated Nexus conversion and compression tool. This scenario describes the mandatory steps to prepare
+            and publish 3D Objects using this toolset and the NXS multiresolution model.</desc>
         <desc xml:lang="en" type="terms">
           <term type="discipline" source="aurehal">Archaeology and Prehistory</term>
           <term type="discipline" source="aurehal">Cultural heritage and museology</term>
@@ -59,8 +62,11 @@
         <figure type="image">
           <!-- Illustration of the scenario -->
           <head>Title of the image (TODO)</head>
-          <graphic url=""/>
-          <figDesc><author></author><availability><licence/></availability></figDesc>
+          <graphic url="https://raw.githubusercontent.com/ParthenosWP4/SSK/master/img/publishing3DObjects.png"/>
+          <figDesc><author>Christoph Hoffmann</author><availability><licence target="http://creativecommons.org/licenses/by/4.0/">
+            <p>The Creative Commons Attribution 4.0 Unported (CC BY 4.0) Licence applies to this
+              document.</p>
+          </licence></availability></figDesc>
         </figure>
         <listEvent>
           <!-- Possibility to add a "preliminary" scenario -->
@@ -68,6 +74,10 @@
 
           <event xml:id="s1" type="researchStep" ref="step_bod_23052019"/>
           <event xml:id="s2" type="researchStep" ref="step_cttvc_24052019"/>
+          <event xml:id="s3" type="researchStep" ref="step_ctpf_24052019"/>
+          <event xml:id="s4" type="researchStep" ref="step_cmnf_24052019"/>
+          <event xml:id="s5" type="researchStep" ref="step_cnm_24052019"/>
+          <event xml:id="s6" type="researchStep" ref="step_pnmtw_24052019"/>
 
         </listEvent>
       </div>

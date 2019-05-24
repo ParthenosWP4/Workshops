@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="validation/resources/TEI_SSK_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!-- You have to type the TEI file, with researchStep or researchScenario -->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_cttvc_24052019">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" type="researchStep" xml:id="step_ctpf_24052019">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <!-- Title of the tei document, not title of the scenario -->
-        <title>Step \"Convert texture to vertex color\"</title>
+        <title>Step \"Convert to PLY format\"</title>
         <author>
           <persName>Christoph Hoffmann</persName>
           <affiliation>OEAW-ACDH</affiliation>
@@ -44,10 +44,11 @@
       <listEvent>
         <event type="researchStep">
           <!-- It is possible to translate the prose, by duplicating the elements head, desc or term, and adding xml:lang attribute -->
-          <head type="stepTitle" xml:lang="en">Convert texture to vertex color</head>
-          <desc type="definition" xml:lang="en">This is an optional step. If your 3D object contains an external
-            texture file, transfer the texture to vertex colors.</desc>
+          <head type="stepTitle" xml:lang="en">Convert to PLY format</head>
+          <desc type="definition" xml:lang="en">If your 3D object is not already
+            in Polygon File Format (PLY), convert it to ASCII format PLY.</desc>
           <desc xml:lang="en" type="terms">
+            <term type="standard" source="ssk" key="PLY"/>
             <term type="activity" source="tadirah" key="conversion"/>
           </desc>
           <linkGrp type="generalResources">
